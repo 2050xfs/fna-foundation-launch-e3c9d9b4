@@ -30,7 +30,7 @@ const Home = () => {
               Building Futures.
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-              Restorative justice, financial literacy, and wellness programs for Black youth—starting here in the Bay Area.
+              Based in Oakland, empowering Black youth aged 13+ through Restorative Justice, education, health, and economic opportunity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/get-involved">
@@ -56,7 +56,7 @@ const Home = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Mission</h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                The Franciscoka & Angelina Foundation (FNA) is dedicated to creating lasting change for Black youth and families. Inspired by our founder's grandmother—who lived to be 103, built wealth, and gave generously to her community in Nigeria—we carry her legacy forward through healing, education, and empowerment.
+                The Francisca & Angelina Foundation is dedicated to creating lasting change for Black youth and families. Inspired by our founder's grandmothers—Francisca and Angelina—women of unwavering faith who built wealth and gave generously to their communities in Nigeria, we carry their legacy forward through healing, education, and empowerment.
               </p>
             </div>
 
@@ -65,9 +65,9 @@ const Home = () => {
                 <div className="w-14 h-14 bg-gradient-hero rounded-xl flex items-center justify-center mb-6">
                   <Heart className="w-7 h-7 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Heal Families</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">Education</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Through restorative justice and wellness programs, we create spaces for healing and connection.
+                  Equipping Black youth aged 13+ with financial literacy and continuous learning for self-sufficiency.
                 </p>
               </div>
 
@@ -75,9 +75,9 @@ const Home = () => {
                 <div className="w-14 h-14 bg-gradient-warm rounded-xl flex items-center justify-center mb-6">
                   <BookOpen className="w-7 h-7 text-accent-foreground" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Equip Youth</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">Health & Wellness</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Financial literacy and entrepreneurship resources empower the next generation to build wealth.
+                  Restorative Justice programs fostering healing, accountability, and holistic well-being.
                 </p>
               </div>
 
@@ -85,9 +85,9 @@ const Home = () => {
                 <div className="w-14 h-14 bg-success rounded-xl flex items-center justify-center mb-6">
                   <Users className="w-7 h-7 text-success-foreground" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Build Partnerships</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">Economic Opportunity</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Expanding opportunities in education, travel, and agriculture through community collaboration.
+                  Creating pathways to economic self-sufficiency and intergenerational prosperity.
                 </p>
               </div>
             </div>
@@ -112,26 +112,26 @@ const Home = () => {
                   Starting Small, Creating Big Impact
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  We believe in starting small to make a big impact. Every event is an opportunity to give back, create memories, and build momentum toward lasting change in our community.
+                  We believe in starting small to make a big impact. Every program empowers Black youth aged 13+ through our three core pillars: education, health, and economic opportunity.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-success rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-success-foreground rounded-full" />
                     </div>
-                    <p className="text-muted-foreground">Restorative justice and healing programs for families</p>
+                    <p className="text-muted-foreground">Restorative Justice and healing programs fostering accountability and well-being</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-success rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-success-foreground rounded-full" />
                     </div>
-                    <p className="text-muted-foreground">Teaching youth how to build financial stability</p>
+                    <p className="text-muted-foreground">Teaching youth financial literacy and skills for self-sufficiency</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-success rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-success-foreground rounded-full" />
                     </div>
-                    <p className="text-muted-foreground">Community events that bring families together</p>
+                    <p className="text-muted-foreground">Building pathways to economic opportunity and intergenerational empowerment</p>
                   </div>
                 </div>
                 <Link to="/about">
@@ -153,7 +153,7 @@ const Home = () => {
             <Calendar className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Upcoming Holiday Event</h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Join us for our Holiday Family Event, providing meals and resources for families in need, with a focus on wellness and community healing.
+              Join us in Oakland for our Holiday Family Event, bringing together Black youth and families with meals, resources, wellness activities, and community healing.
             </p>
             <Link to="/events">
               <Button variant="cta" size="lg" className="text-lg">
@@ -172,7 +172,7 @@ const Home = () => {
               Be Part of the Change
             </h2>
             <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-              Your support helps us provide restorative justice programs, teach youth financial literacy, and host community events that bring families together.
+              Your support empowers Black youth in Oakland through Restorative Justice programs, financial literacy education, and pathways to economic opportunity and self-sufficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/donate">

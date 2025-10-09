@@ -17,7 +17,7 @@ const Donate = () => {
               Support Our Mission
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Your generosity helps us heal families, empower youth, and build stronger communities. Every contribution makes a lasting impact.
+              Your generosity empowers Black youth in Oakland through education, health, and economic opportunity. Every contribution creates lasting change.
             </p>
           </div>
         </div>
@@ -34,31 +34,31 @@ const Donate = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-primary-foreground" />
+                  <BookOpen className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Healing Programs</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Education Programs</h3>
                 <p className="text-muted-foreground">
-                  Provide restorative justice and wellness programs for families
+                  Equip Black youth aged 13+ with financial literacy, continuous learning, and pathways to self-sufficiency
                 </p>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-warm rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-8 h-8 text-accent-foreground" />
+                  <Heart className="w-8 h-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Youth Education</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Health & Wellness</h3>
                 <p className="text-muted-foreground">
-                  Teach youth how to build financial stability and wealth
+                  Provide Restorative Justice programs fostering healing, accountability, and holistic well-being
                 </p>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-success rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-8 h-8 text-success-foreground" />
+                  <DollarSign className="w-8 h-8 text-success-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Community Events</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Economic Opportunity</h3>
                 <p className="text-muted-foreground">
-                  Host events that bring families together and provide resources
+                  Create pathways to economic self-sufficiency and intergenerational prosperity
                 </p>
               </div>
             </div>
@@ -85,12 +85,12 @@ const Donate = () => {
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-elevated transition-shadow">
                 <div className="text-3xl font-bold text-primary mb-2">$50</div>
-                <p className="text-sm text-muted-foreground">Supports a youth workshop</p>
+                <p className="text-sm text-muted-foreground">Supports a youth education workshop</p>
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-elevated transition-shadow">
                 <div className="text-3xl font-bold text-primary mb-2">$100</div>
-                <p className="text-sm text-muted-foreground">Funds a restorative justice session</p>
+                <p className="text-sm text-muted-foreground">Funds a Restorative Justice circle</p>
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-elevated transition-shadow">
@@ -133,7 +133,7 @@ const Donate = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Direct Community Impact</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    100% of your donation goes directly to programs serving Black youth and families in the Bay Area. We're starting small to ensure every dollar makes a real difference.
+                    100% of your donation goes directly to programs serving Black youth aged 13+ and families in Oakland. We're starting small to ensure every dollar makes a real difference.
                   </p>
                 </div>
               </div>
@@ -151,9 +151,9 @@ const Donate = () => {
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Generational Change</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Intergenerational Empowerment</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Your support doesn't just help today—it creates lasting change by equipping youth with tools to build wealth and strengthening family bonds through healing programs.
+                    Your support creates lasting change by equipping youth with tools for self-sufficiency, holistic well-being, and continuous learning—building peace, prosperity, and intergenerational empowerment.
                   </p>
                 </div>
               </div>

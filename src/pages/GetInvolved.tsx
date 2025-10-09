@@ -16,7 +16,7 @@ const GetInvolved = () => {
               Get Involved
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              You don't have to wait—be part of the change today. Whether you volunteer, partner with us, or sponsor an event, your involvement makes a real difference.
+              Join us in Oakland as we empower Black youth through Restorative Justice. Whether you volunteer, partner with us, or sponsor an event, your involvement creates lasting change.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ const GetInvolved = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Volunteer</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Help us serve families and support youth programs. Make a direct impact in your community.
+                  Help us serve Black youth and families through programs focused on education, health, and economic opportunity.
                 </p>
                 <Button variant="default" className="w-full" asChild>
                   <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">
@@ -96,9 +96,9 @@ const GetInvolved = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-2">Youth Mentorship</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Youth Mentorship (Ages 13+)</h3>
                 <p className="text-muted-foreground">
-                  Guide young people through financial literacy programs and entrepreneurship workshops.
+                  Guide Black youth through financial literacy programs, economic opportunity workshops, and pathways to self-sufficiency.
                 </p>
               </div>
 
@@ -110,9 +110,9 @@ const GetInvolved = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-2">Wellness Facilitators</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Health & Wellness Facilitators</h3>
                 <p className="text-muted-foreground">
-                  Lead wellness activities, restorative justice circles, and healing programs for families.
+                  Lead Restorative Justice circles, wellness activities, and holistic well-being programs supporting healing and accountability.
                 </p>
               </div>
             </div>
@@ -149,7 +149,7 @@ const GetInvolved = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Collaborative Impact</h3>
                     <p className="text-primary-foreground/90">
-                      Work directly with us to design programs that serve the community and align with your values.
+                      Work with us to design programs focused on education, health, and economic opportunity that create self-sufficient communities.
                     </p>
                   </div>
                 </div>

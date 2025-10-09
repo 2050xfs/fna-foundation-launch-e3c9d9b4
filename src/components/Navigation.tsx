@@ -27,8 +27,8 @@ const Navigation = () => {
               <span className="text-primary-foreground font-bold text-xl">FNA</span>
             </div>
             <div className="hidden sm:block">
-              <div className="font-bold text-lg text-foreground">Franciscoka & Angelina Foundation</div>
-              <div className="text-sm text-muted-foreground">Building Futures Together</div>
+              <div className="font-bold text-lg text-foreground">Francisca & Angelina Foundation</div>
+              <div className="text-sm text-muted-foreground">Empowering Youth, Building Futures</div>
             </div>
           </Link>
 

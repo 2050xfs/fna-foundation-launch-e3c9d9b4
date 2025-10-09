@@ -17,7 +17,7 @@ const Events = () => {
               Community Events
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              We believe in starting small to make a big impact. Every event is an opportunity to give back, create memories, and build momentum.
+              Based in Oakland, we bring together Black youth and families through events focused on healing, education, and economic opportunity.
             </p>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Events = () => {
                     Holiday Family Event
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Join us for a special holiday gathering providing meals and resources for families in need, with a focus on wellness and community healing.
+                    Join us for a special holiday gathering providing meals and resources for Black youth and families, with a focus on wellness, healing, and building community connections.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -74,7 +74,7 @@ const Events = () => {
                     <div className="flex items-start space-x-3">
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">Bay Area Community Center</p>
+                        <p className="font-semibold text-foreground">Oakland Community Center</p>
                         <p className="text-sm text-muted-foreground">Location details coming soon</p>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ const Events = () => {
                     <div className="flex items-start space-x-3">
                       <Users className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">Open to All Families</p>
+                        <p className="font-semibold text-foreground">For Youth Aged 13+ and Families</p>
                         <p className="text-sm text-muted-foreground">Free event, registration required</p>
                       </div>
                     </div>
@@ -120,9 +120,9 @@ const Events = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Wellness Activities</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Health & Wellness</h3>
                 <p className="text-muted-foreground">
-                  Participate in activities focused on healing, mindfulness, and family connection.
+                  Participate in Restorative Justice circles, healing activities, mindfulness practices, and holistic well-being programs.
                 </p>
               </div>
 
@@ -134,9 +134,9 @@ const Events = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Youth Programs</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Youth Programs (Ages 13+)</h3>
                 <p className="text-muted-foreground">
-                  Age-appropriate activities and education opportunities for children and teens.
+                  Educational workshops on financial literacy, economic opportunity, and skills for self-sufficiency.
                 </p>
               </div>
             </div>

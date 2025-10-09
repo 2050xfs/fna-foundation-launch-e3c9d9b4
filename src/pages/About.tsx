@@ -15,7 +15,7 @@ const About = () => {
               Our Story
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Carrying forward a legacy of generosity, wisdom, and community care
+              Based in Oakland, carrying forward a legacy of faith, generosity, and community care
             </p>
           </div>
         </div>
@@ -31,18 +31,18 @@ const About = () => {
                   <Heart className="w-8 h-8 text-accent-foreground" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  A Legacy of Love & Generosity
+                  A Legacy of Faith & Generosity
                 </h2>
               </div>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
                 <p className="leading-relaxed">
-                  The Franciscoka & Angelina Foundation is inspired by our founder's grandmother—a remarkable woman who lived to be 103 years old. Throughout her life, she built wealth not just for herself, but to uplift her entire community in Nigeria.
+                  The Francisca & Angelina Foundation is inspired by our founder's grandmothers—Francisca and Angelina—women of unwavering faith who selflessly nourished communities in Nigeria. Throughout their lives, they built wealth not just for themselves, but to uplift entire communities.
                 </p>
                 <p className="leading-relaxed">
-                  Her legacy was one of radical generosity, financial wisdom, and deep community care. She understood that true wealth isn't measured by what we keep, but by what we give away and the lives we touch.
+                  Their legacy was one of radical generosity, financial wisdom, and deep community care. They understood that true wealth isn't measured by what we keep, but by what we give away and the lives we touch.
                 </p>
                 <p className="leading-relaxed">
-                  Today, we carry that torch forward in the Bay Area, working with Black youth and families to create the same opportunities for healing, education, and prosperity that she championed throughout her extraordinary life.
+                  Today, we carry that torch forward in Oakland, empowering Black youth aged 13 and up through Restorative Justice principles to create the same opportunities for healing, education, and prosperity that Francisca and Angelina championed throughout their extraordinary lives.
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To create lasting change for Black youth and families through restorative justice, financial literacy, and wellness programs. We heal families, equip youth with resources, and build partnerships that expand opportunities in education, travel, and agriculture.
+                  Based in Oakland, California, and inspired by the profound legacy of Francisca and Angelina, we empower Black youth aged 13 and up through Restorative Justice principles. We cultivate thriving, self-sufficient communities by championing equitable access to education, health, and economic opportunity, fostering healing, accountability, and positive societal reintegration.
                 </p>
               </div>
 
@@ -73,7 +73,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  A future where every Black family has access to healing, every youth has the tools to build wealth, and every community member can thrive. We envision intergenerational prosperity built on the foundation of restorative justice and radical care.
+                  We envision a future where every young person, guided by the enduring spirit of Francisca and Angelina, transforms adversity into opportunity through restorative practices. Our communities will be beacons of equitable access, where individuals are equipped with the tools for self-sufficiency, holistic well-being, and continuous learning, creating a lasting legacy of peace, prosperity, and intergenerational empowerment.
                 </p>
               </div>
             </div>
@@ -97,10 +97,10 @@ const About = () => {
                 <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mb-4 mx-auto">
                   <span className="text-primary-foreground font-bold text-2xl">FO</span>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground text-center mb-2">Franciscoka Obi</h3>
+                <h3 className="text-xl font-semibold text-foreground text-center mb-2">Francisca Obi</h3>
                 <p className="text-primary text-center mb-3">Founder & Executive Director</p>
                 <p className="text-muted-foreground text-center text-sm">
-                  Carrying forward her grandmother's legacy of community care and generosity
+                  Carrying forward her grandmothers' legacy of faith, community care, and generosity
                 </p>
               </div>
 

@@ -6,7 +6,7 @@ import eventImage from "@/assets/community-event.jpg";
 
 const Events = () => {
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
@@ -16,6 +16,7 @@ const Events = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Community Events
             </h1>
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground leading-relaxed">
               Based in Oakland, we bring together Black youth and families through events focused on healing, education, and economic opportunity.
             </p>
@@ -27,9 +28,10 @@ const Events = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
               Upcoming Event
             </h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
 
             <div className="bg-card rounded-2xl overflow-hidden shadow-elevated border border-border">
               <div className="grid md:grid-cols-2">
@@ -104,12 +106,13 @@ const Events = () => {
       </section>
 
       {/* What to Expect */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
               What to Expect
             </h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
@@ -148,11 +151,12 @@ const Events = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Past Events
             </h2>
-            <div className="bg-muted/50 rounded-2xl p-12 border border-border">
-              <Calendar className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-8" />
+            <div className="bg-muted rounded-2xl p-12 border border-border">
+              <Calendar className="w-16 h-16 text-primary mx-auto mb-4" />
               <p className="text-xl text-muted-foreground">
                 This is our first major event! Check back here to see photos and stories from our community gatherings.
               </p>

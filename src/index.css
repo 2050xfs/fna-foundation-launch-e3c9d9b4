@@ -8,95 +8,95 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 263 30% 15%;
+    --background: 39 53% 89%;
+    --foreground: 11 26% 24%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 263 30% 15%;
+    --card: 39 45% 94%;
+    --card-foreground: 11 26% 24%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 263 30% 15%;
+    --popover: 39 53% 89%;
+    --popover-foreground: 11 26% 24%;
 
-    /* Royal purple - dignity, wisdom, legacy */
-    --primary: 263 70% 50%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 263 70% 65%;
-    --primary-dark: 263 70% 35%;
+    /* Gold Ochre - generosity, opportunity */
+    --primary: 44 52% 55%;
+    --primary-foreground: 11 26% 24%;
+    --primary-light: 44 45% 62%;
+    --primary-dark: 44 55% 45%;
 
-    /* Warm gold - prosperity, heritage */
-    --secondary: 45 95% 60%;
-    --secondary-foreground: 263 30% 15%;
+    /* Forest Green - healing, balance */
+    --secondary: 125 21% 23%;
+    --secondary-foreground: 39 53% 89%;
 
-    /* Coral - community warmth, healing */
-    --accent: 16 90% 65%;
-    --accent-foreground: 0 0% 100%;
+    /* Clay Red - community warmth */
+    --accent: 17 53% 47%;
+    --accent-foreground: 39 53% 89%;
 
-    /* Success green for CTAs */
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 100%;
+    /* Success tint keeps within Forest tones */
+    --success: 125 24% 32%;
+    --success-foreground: 39 53% 89%;
 
-    --muted: 263 15% 95%;
-    --muted-foreground: 263 15% 40%;
+    --muted: 125 25% 94%;
+    --muted-foreground: 11 26% 32%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 39 53% 95%;
 
-    --border: 263 20% 90%;
-    --input: 263 20% 90%;
-    --ring: 263 70% 50%;
+    --border: 125 20% 82%;
+    --input: 125 20% 82%;
+    --ring: 44 52% 55%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(263 70% 50%) 0%, hsl(263 70% 35%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(16 90% 65%) 0%, hsl(45 95% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(263 15% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(11 26% 24%) 20%, hsl(17 53% 47%) 60%, hsl(44 52% 55%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(17 53% 47%) 0%, hsl(44 52% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(39 53% 92%) 0%, hsl(125 25% 94%) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(263 70% 50% / 0.15);
-    --shadow-elevated: 0 10px 40px -8px hsl(263 70% 50% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(125 21% 23% / 0.2);
+    --shadow-elevated: 0 10px 40px -8px hsl(125 21% 23% / 0.25);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 263 30% 8%;
-    --foreground: 0 0% 98%;
+    --background: 11 26% 12%;
+    --foreground: 39 53% 90%;
 
-    --card: 263 30% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 11 26% 16%;
+    --card-foreground: 39 53% 90%;
 
-    --popover: 263 30% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 11 26% 16%;
+    --popover-foreground: 39 53% 90%;
 
-    --primary: 263 70% 65%;
-    --primary-foreground: 263 30% 8%;
-    --primary-light: 263 70% 75%;
-    --primary-dark: 263 70% 50%;
+    --primary: 44 52% 48%;
+    --primary-foreground: 11 26% 18%;
+    --primary-light: 44 45% 58%;
+    --primary-dark: 44 60% 38%;
 
-    --secondary: 45 95% 65%;
-    --secondary-foreground: 263 30% 8%;
+    --secondary: 125 25% 35%;
+    --secondary-foreground: 39 53% 90%;
 
-    --accent: 16 90% 70%;
-    --accent-foreground: 263 30% 8%;
+    --accent: 17 53% 42%;
+    --accent-foreground: 39 53% 90%;
 
-    --success: 142 71% 55%;
-    --success-foreground: 263 30% 8%;
+    --success: 125 25% 38%;
+    --success-foreground: 39 53% 90%;
 
-    --muted: 263 30% 15%;
-    --muted-foreground: 263 15% 65%;
+    --muted: 11 26% 22%;
+    --muted-foreground: 39 53% 82%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 39 53% 95%;
 
-    --border: 263 30% 20%;
-    --input: 263 30% 20%;
-    --ring: 263 70% 65%;
+    --border: 11 26% 30%;
+    --input: 11 26% 30%;
+    --ring: 44 52% 48%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(263 70% 35%) 0%, hsl(263 70% 20%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(16 90% 50%) 0%, hsl(45 95% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(263 30% 8%) 0%, hsl(263 30% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(11 26% 18%) 20%, hsl(17 53% 40%) 60%, hsl(44 52% 48%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(17 53% 42%) 0%, hsl(44 52% 48%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(11 26% 14%) 0%, hsl(11 26% 20%) 100%);
 
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
     --shadow-elevated: 0 10px 40px -8px hsl(0 0% 0% / 0.6);

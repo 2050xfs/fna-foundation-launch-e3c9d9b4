@@ -4,7 +4,7 @@ import { Heart, Target, Eye } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
@@ -14,6 +14,7 @@ const About = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Our Story
             </h1>
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground leading-relaxed">
               Based in Oakland, carrying forward a legacy of faith, generosity, and community care
             </p>
@@ -27,8 +28,8 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elevated border border-border">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-warm rounded-full flex items-center justify-center">
-                  <Heart className="w-8 h-8 text-accent-foreground" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-accent/20">
+                  <Heart className="w-8 h-8 text-accent" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                   A Legacy of Faith & Generosity
@@ -51,14 +52,14 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Mission */}
               <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
-                <div className="w-14 h-14 bg-gradient-hero rounded-xl flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-primary-foreground" />
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-primary/20">
+                  <Target className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -68,8 +69,8 @@ const About = () => {
 
               {/* Vision */}
               <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
-                <div className="w-14 h-14 bg-gradient-warm rounded-xl flex items-center justify-center mb-6">
-                  <Eye className="w-7 h-7 text-accent-foreground" />
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-accent/20">
+                  <Eye className="w-7 h-7 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -88,14 +89,15 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
               Our Leadership
             </h2>
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-10" />
             <p className="text-xl text-muted-foreground mb-12 text-center">
               Dedicated individuals committed to our mission
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-primary-foreground font-bold text-2xl">FO</span>
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 mx-auto bg-primary/20">
+                  <span className="text-primary font-bold text-2xl">FO</span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground text-center mb-2">Francisca Obi</h3>
                 <p className="text-primary text-center mb-3">Founder & Executive Director</p>
@@ -105,8 +107,8 @@ const About = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <div className="w-20 h-20 bg-gradient-warm rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-accent-foreground font-bold text-2xl">BD</span>
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 mx-auto bg-accent/20">
+                  <span className="text-accent font-bold text-2xl">BD</span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground text-center mb-2">Board Members</h3>
                 <p className="text-primary text-center mb-3">Coming Soon</p>

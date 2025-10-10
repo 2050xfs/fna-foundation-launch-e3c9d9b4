@@ -5,17 +5,18 @@ import { Heart, DollarSign, Users, BookOpen, Calendar, CheckCircle } from "lucid
 
 const Donate = () => {
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Heart className="w-20 h-20 text-primary mx-auto mb-6" />
+            <Heart className="w-20 h-20 text-accent mx-auto mb-6" />
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Support Our Mission
             </h1>
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground leading-relaxed">
               Your generosity empowers Black youth in Oakland through education, health, and economic opportunity. Every contribution creates lasting change.
             </p>
@@ -27,14 +28,15 @@ const Donate = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
               Your Support Helps Us
             </h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-12" />
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-8 h-8 text-primary-foreground" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-primary/20">
+                  <BookOpen className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Education Programs</h3>
                 <p className="text-muted-foreground">
@@ -43,8 +45,8 @@ const Donate = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-warm rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-accent-foreground" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent/20">
+                  <Heart className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Health & Wellness</h3>
                 <p className="text-muted-foreground">
@@ -53,8 +55,8 @@ const Donate = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-success rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-success-foreground" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-secondary/20">
+                  <DollarSign className="w-8 h-8 text-secondary-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Economic Opportunity</h3>
                 <p className="text-muted-foreground">
@@ -67,7 +69,7 @@ const Donate = () => {
       </section>
 
       {/* Donation Amounts */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
@@ -99,19 +101,23 @@ const Donate = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 shadow-elevated text-center">
-              <h3 className="text-3xl font-bold text-primary-foreground mb-6">
+            <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 shadow-elevated text-center text-background">
+              <h3 className="text-3xl font-bold text-background mb-6">
                 Choose Your Donation Amount
               </h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Button variant="hero" size="lg" className="text-lg">
                   One-Time Gift
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg border-background text-background hover:bg-background/10 hover:text-primary"
+                >
                   Monthly Giving
                 </Button>
               </div>
-              <p className="text-primary-foreground/90 text-sm">
+              <p className="text-background/80 text-sm">
                 Secure payment processing through Stripe, PayPal, or Donorbox
               </p>
             </div>
@@ -123,13 +129,14 @@ const Donate = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
               Why Your Donation Matters
             </h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Direct Community Impact</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -139,7 +146,7 @@ const Donate = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Transparent Operations</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -149,7 +156,7 @@ const Donate = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Intergenerational Empowerment</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -159,7 +166,7 @@ const Donate = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <CheckCircle className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Tax Deductible</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -173,12 +180,13 @@ const Donate = () => {
       </section>
 
       {/* Other Ways to Give */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
               Other Ways to Give
             </h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
@@ -205,9 +213,10 @@ const Donate = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Every Gift Creates Lasting Change
             </h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground mb-8">
               Join us in carrying forward a legacy of generosity and community care
             </p>

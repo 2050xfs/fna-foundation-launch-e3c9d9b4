@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PartnershipForm from "@/components/forms/PartnershipForm";
+import VolunteerApplicationForm from "@/components/forms/VolunteerApplicationForm";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { HandHeart, Building2, Users, Mail } from "lucide-react";
 
 const GetInvolved = () => {
+  const [isVolunteerDialogOpen, setIsVolunteerDialogOpen] = useState(false);
+  const [isPartnerDialogOpen, setIsPartnerDialogOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -37,11 +45,16 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Help us serve Black youth and families through programs focused on education, health, and economic opportunity.
                 </p>
-                <Button variant="default" className="w-full" asChild>
-                  <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">
-                    Sign Up to Volunteer
-                  </a>
-                </Button>
+                <Dialog open={isVolunteerDialogOpen} onOpenChange={setIsVolunteerDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="default" className="w-full">
+                      Apply to Volunteer
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none sm:rounded-none">
+                    <VolunteerApplicationForm onSuccess={() => setIsVolunteerDialogOpen(false)} />
+                  </DialogContent>
+                </Dialog>
               </div>
 
               {/* Partner */}
@@ -53,11 +66,16 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Organizations can collaborate with us to expand resources and opportunities.
                 </p>
-                <Button variant="default" className="w-full" asChild>
-                  <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">
-                    Become a Partner
-                  </a>
-                </Button>
+                <Dialog open={isPartnerDialogOpen} onOpenChange={setIsPartnerDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="default" className="w-full">
+                      Become a Partner
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none sm:rounded-none">
+                    <PartnershipForm onSuccess={() => setIsPartnerDialogOpen(false)} />
+                  </DialogContent>
+                </Dialog>
               </div>
 
               {/* Sponsor */}

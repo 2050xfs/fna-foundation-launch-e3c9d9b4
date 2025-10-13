@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import EventFeedbackForm from "@/components/forms/EventFeedbackForm";
+import EventSuggestionForm from "@/components/forms/EventSuggestionForm";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users, Clock } from "lucide-react";
 import eventImage from "@/assets/community-event.jpg";
@@ -161,6 +163,32 @@ const Events = () => {
                 This is our first major event! Check back here to see photos and stories from our community gatherings.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Event Feedback Form */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">Share Your Feedback</h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
+            <EventFeedbackForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Event Suggestion Form */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">Suggest an Event</h2>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
+            <p className="text-lg text-muted-foreground text-center mb-8">
+              Dreaming up a gathering that would serve Black youth and families? Share the vision below and we&apos;ll explore it with
+              you.
+            </p>
+            <EventSuggestionForm />
           </div>
         </div>
       </section>

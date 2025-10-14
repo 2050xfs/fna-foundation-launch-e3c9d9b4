@@ -1,15 +1,50 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import DonationOverlay from "@/components/DonationOverlay";
 import { Heart, Users, BookOpen, Calendar, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-community.jpg";
 import youthImage from "@/assets/youth-learning.jpg";
 
+const DISMISS_KEY = "fna-donation-overlay-dismissed";
+
 const Home = () => {
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const hasDismissed = window.localStorage.getItem(DISMISS_KEY);
+
+    if (hasDismissed) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsOverlayOpen(true);
+    }, 12000);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, []);
+
+  const handleOverlayChange = (open: boolean) => {
+    setIsOverlayOpen(open);
+
+    if (!open && typeof window !== "undefined") {
+      window.localStorage.setItem(DISMISS_KEY, "true");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <DonationOverlay open={isOverlayOpen} onOpenChange={handleOverlayChange} />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

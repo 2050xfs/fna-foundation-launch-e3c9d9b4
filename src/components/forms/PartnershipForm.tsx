@@ -51,7 +51,7 @@ const PartnershipForm = ({ onSuccess }: PartnershipFormProps) => {
       onSuccess?.();
     } catch (error) {
       console.error(error);
-      toast.error("Oops! Something went wrong. Please try again or email us directly.");
+      toast.error("Oops! Something went wrong. Please try again or email us at info@thefalegacy.org");
     } finally {
       setIsSubmitting(false);
     }
@@ -68,25 +68,25 @@ const PartnershipForm = ({ onSuccess }: PartnershipFormProps) => {
       sourceForm="partnership"
     >
       <FormField control={form.control} name="organizationName" label="Organization name" required>
-        {(field) => <Input {...field} placeholder="Community Impact Collective" />}
+        {(field) => <Input {...field} value={field.value as string} placeholder="Community Impact Collective" />}
       </FormField>
 
       <div className="grid gap-6 md:grid-cols-2">
         <FormField control={form.control} name="contactName" label="Primary contact" required>
-          {(field) => <Input {...field} placeholder="Avery Johnson" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="Avery Johnson" />}
         </FormField>
         <FormField control={form.control} name="contactEmail" label="Contact email" required>
-          {(field) => <Input {...field} placeholder="avery@organization.org" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="avery@organization.org" />}
         </FormField>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <FormField control={form.control} name="contactPhone" label="Contact phone" required>
-          {(field) => <Input {...field} placeholder="(510) 555-1234" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="(510) 555-1234" />}
         </FormField>
         <FormField control={form.control} name="partnershipType" label="Type of partnership" required>
           {(field) => (
-            <Select value={field.value} onValueChange={field.onChange}>
+            <Select value={field.value as string} onValueChange={field.onChange}>
               <SelectTrigger className="bg-background">
                 <SelectValue placeholder="Select a partnership type" />
               </SelectTrigger>
@@ -108,7 +108,7 @@ const PartnershipForm = ({ onSuccess }: PartnershipFormProps) => {
         label="How does this partnership align with our mission?"
         required
       >
-        {(field) => <Textarea {...field} rows={4} placeholder="Our organization advances restorative justice by..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="Our organization advances restorative justice by..." />}
       </FormField>
 
       <FormField
@@ -117,7 +117,7 @@ const PartnershipForm = ({ onSuccess }: PartnershipFormProps) => {
         label="What resources or expertise can you share?"
         required
       >
-        {(field) => <Textarea {...field} rows={4} placeholder="We can provide facilitators, funding, and program space..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="We can provide facilitators, funding, and program space..." />}
       </FormField>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -126,19 +126,19 @@ const PartnershipForm = ({ onSuccess }: PartnershipFormProps) => {
           name="logoUrl"
           label="Logo or brand assets URL (optional)"
         >
-          {(field) => <Input {...field} placeholder="https://drive.google.com/..." />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="https://drive.google.com/..." />}
         </FormField>
         <FormField
           control={form.control}
           name="proposalUrl"
           label="Proposal or deck URL (optional)"
         >
-          {(field) => <Input {...field} placeholder="https://docs.google.com/..." />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="https://docs.google.com/..." />}
         </FormField>
       </div>
 
       <FormField control={form.control} name="additionalNotes" label="Anything else we should know?">
-        {(field) => <Textarea {...field} rows={3} placeholder="Share campaign timelines, sponsorship tiers, or other ideas." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={3} placeholder="Share campaign timelines, sponsorship tiers, or other ideas." />}
       </FormField>
 
       <CheckboxField

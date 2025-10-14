@@ -46,11 +46,11 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Connect With Us</h3>
             <div className="flex flex-col space-y-3">
               <a
-                href="mailto:info@fna-foundation.org"
+                href="mailto:info@thefalegacy.org"
                 className="flex items-center space-x-2 text-background/80 hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>info@fna-foundation.org</span>
+                <span>info@thefalegacy.org</span>
               </a>
               <div className="flex space-x-4 pt-2">
                 <a

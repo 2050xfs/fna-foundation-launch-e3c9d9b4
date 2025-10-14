@@ -68,7 +68,7 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
       onSuccess?.();
     } catch (error) {
       console.error(error);
-      toast.error("Oops! Something went wrong. Please try again or email us directly.");
+      toast.error("Oops! Something went wrong. Please try again or email us at info@thefalegacy.org");
     } finally {
       setIsSubmitting(false);
     }
@@ -86,24 +86,24 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
     >
       <div className="grid gap-6 md:grid-cols-2">
         <FormField control={form.control} name="firstName" label="First name" required>
-          {(field) => <Input {...field} placeholder="Taylor" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="Taylor" />}
         </FormField>
         <FormField control={form.control} name="lastName" label="Last name" required>
-          {(field) => <Input {...field} placeholder="Morgan" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="Morgan" />}
         </FormField>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <FormField control={form.control} name="email" label="Email" required>
-          {(field) => <Input {...field} placeholder="taylor@email.com" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="taylor@email.com" />}
         </FormField>
         <FormField control={form.control} name="phone" label="Phone" required>
-          {(field) => <Input {...field} placeholder="(510) 555-6789" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="(510) 555-6789" />}
         </FormField>
       </div>
 
       <FormField control={form.control} name="cityState" label="City & State" required>
-        {(field) => <Input {...field} placeholder="Oakland, CA" />}
+        {(field) => <Input {...field} value={field.value as string} placeholder="Oakland, CA" />}
       </FormField>
 
       <FormField
@@ -112,13 +112,13 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
         label="What inspires you to volunteer with FA Foundation?"
         required
       >
-        {(field) => <Textarea {...field} rows={4} placeholder="I'm passionate about restorative justice because..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="I'm passionate about restorative justice because..." />}
       </FormField>
 
       <FormField control={form.control} name="passionArea" label="Where would you like to plug in?" required>
         {(field) => (
           <RadioGroup
-            value={field.value}
+            value={field.value as string}
             onValueChange={field.onChange}
             className="grid gap-3 md:grid-cols-2"
           >
@@ -155,7 +155,7 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
         label="What skills or experience would you bring?"
         required
       >
-        {(field) => <Textarea {...field} rows={4} placeholder="Event planning, facilitation, fundraising, etc." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="Event planning, facilitation, fundraising, etc." />}
       </FormField>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -165,12 +165,12 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
           label="Hours per week you can commit"
           required
         >
-          {(field) => <Input {...field} placeholder="8 hours" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="8 hours" />}
         </FormField>
         <FormField control={form.control} name="preferredContact" label="Preferred way to connect" required>
           {(field) => (
             <RadioGroup
-              value={field.value}
+              value={field.value as string}
               onValueChange={field.onChange}
               className="flex flex-wrap gap-3"
             >
@@ -209,7 +209,7 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
           label="Emergency contact"
           required
         >
-          {(field) => <Input {...field} placeholder="Casey Morgan" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="Casey Morgan" />}
         </FormField>
         <FormField
           control={form.control}
@@ -217,7 +217,7 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
           label="Relationship"
           required
         >
-          {(field) => <Input {...field} placeholder="Sibling" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="Sibling" />}
         </FormField>
         <FormField
           control={form.control}
@@ -225,12 +225,12 @@ const VolunteerApplicationForm = ({ onSuccess }: VolunteerApplicationFormProps) 
           label="Phone"
           required
         >
-          {(field) => <Input {...field} placeholder="(510) 555-4321" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="(510) 555-4321" />}
         </FormField>
       </div>
 
       <FormField control={form.control} name="additionalNotes" label="Anything else you'd like us to know?">
-        {(field) => <Textarea {...field} rows={3} placeholder="Scheduling notes, language preferences, or accessibility needs." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={3} placeholder="Scheduling notes, language preferences, or accessibility needs." />}
       </FormField>
 
       <CheckboxField

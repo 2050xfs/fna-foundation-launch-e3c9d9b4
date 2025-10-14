@@ -49,7 +49,7 @@ const EventFeedbackForm = () => {
       form.reset();
     } catch (error) {
       console.error(error);
-      toast.error("Oops! Something went wrong. Please try again or email us directly.");
+      toast.error("Oops! Something went wrong. Please try again or email us at info@thefalegacy.org");
     } finally {
       setIsSubmitting(false);
     }
@@ -67,7 +67,7 @@ const EventFeedbackForm = () => {
     >
       <div className="grid gap-6 md:grid-cols-2">
         <FormField control={form.control} name="eventName" label="Event name" required>
-          {(field) => <Input {...field} placeholder="Holiday Family Event" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="Holiday Family Event" />}
         </FormField>
         <FormField
           control={form.control}
@@ -75,14 +75,14 @@ const EventFeedbackForm = () => {
           label="When did this event take place?"
           required
         >
-          {(field) => <Input {...field} placeholder="December 15, 2025" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="December 15, 2025" />}
         </FormField>
       </div>
 
       <FormField control={form.control} name="rating" label="How would you rate the event?" required>
         {(field) => (
           <RadioGroup
-            value={field.value}
+            value={field.value as string}
             onValueChange={field.onChange}
             className="grid gap-3 md:grid-cols-5"
           >
@@ -115,11 +115,11 @@ const EventFeedbackForm = () => {
         label="What did you enjoy most about this event?"
         required
       >
-        {(field) => <Textarea {...field} rows={4} placeholder="The restorative justice circle was powerful because..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="The restorative justice circle was powerful because..." />}
       </FormField>
 
       <FormField control={form.control} name="improvements" label="How can we improve future events?">
-        {(field) => <Textarea {...field} rows={4} placeholder="We'd love to see..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="We'd love to see..." />}
       </FormField>
 
       <FormField
@@ -128,7 +128,7 @@ const EventFeedbackForm = () => {
         label="How did this event align with the FA Foundation mission?"
         required
       >
-        {(field) => <Textarea {...field} rows={4} placeholder="This event supported healing and economic opportunity by..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="This event supported healing and economic opportunity by..." />}
       </FormField>
 
       <FormField
@@ -139,7 +139,7 @@ const EventFeedbackForm = () => {
       >
         {(field) => (
           <RadioGroup
-            value={field.value}
+            value={field.value as string}
             onValueChange={field.onChange}
             className="grid gap-4 md:grid-cols-2"
           >
@@ -171,10 +171,10 @@ const EventFeedbackForm = () => {
 
       <div className="grid gap-6 md:grid-cols-2">
         <FormField control={form.control} name="testimonial" label="Share a testimonial (optional)">
-          {(field) => <Textarea {...field} rows={4} placeholder="FA Foundation created space for..." />}
+          {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="FA Foundation created space for..." />}
         </FormField>
         <FormField control={form.control} name="email" label="Your email (optional)">
-          {(field) => <Input {...field} placeholder="you@example.com" />}
+          {(field) => <Input {...field} value={field.value as string} placeholder="you@example.com" />}
         </FormField>
       </div>
 

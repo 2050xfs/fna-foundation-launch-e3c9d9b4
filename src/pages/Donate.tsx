@@ -103,23 +103,40 @@ const Donate = () => {
 
             <div className="bg-gradient-hero rounded-2xl p-8 md:p-12 shadow-elevated text-center text-background">
               <h3 className="text-3xl font-bold text-background mb-6">
-                Choose Your Donation Amount
+                Choose Your Donation Method
               </h3>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <Button variant="hero" size="lg" className="text-lg">
-                  One-Time Gift
-                </Button>
+              
+              {/* Primary: Zeffy */}
+              <div className="mb-8">
+                <p className="text-background/90 text-lg mb-4">Recommended - Zero fees, 100% goes to our mission</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    variant="hero" 
+                    size="lg" 
+                    className="text-lg"
+                    asChild
+                  >
+                    <a href="https://www.zeffy.com/en-US/donation-form/thank-you-for-your-generosity-to-the-fanda-foundation" target="_blank" rel="noopener noreferrer">
+                      Donate via Zeffy (One-Time or Monthly)
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Secondary: PayPal */}
+              <div className="border-t border-background/20 pt-6">
+                <p className="text-background/80 text-sm mb-4">Or use PayPal</p>
                 <Button
                   variant="outline"
-                  size="lg"
-                  className="text-lg border-background text-background hover:bg-background/10 hover:text-primary"
+                  size="default"
+                  className="border-background text-background hover:bg-background/10 hover:text-background"
+                  asChild
                 >
-                  Monthly Giving
+                  <a href="https://www.paypal.com/donate/buttons/manage/ZX7QKMCTDZMM8?status=SUCCESS" target="_blank" rel="noopener noreferrer">
+                    Donate via PayPal
+                  </a>
                 </Button>
               </div>
-              <p className="text-background/80 text-sm">
-                Secure payment processing through Stripe, PayPal, or Donorbox
-              </p>
             </div>
           </div>
         </div>
@@ -220,8 +237,10 @@ const Donate = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Join us in carrying forward a legacy of generosity and community care
             </p>
-            <Button variant="cta" size="lg" className="text-lg">
-              Make Your Donation Today
+            <Button variant="cta" size="lg" className="text-lg" asChild>
+              <a href="https://www.zeffy.com/en-US/donation-form/thank-you-for-your-generosity-to-the-fanda-foundation" target="_blank" rel="noopener noreferrer">
+                Make Your Donation Today
+              </a>
             </Button>
           </div>
         </div>

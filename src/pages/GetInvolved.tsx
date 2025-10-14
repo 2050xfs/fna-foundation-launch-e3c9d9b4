@@ -206,7 +206,7 @@ const GetInvolved = () => {
                 We'd love to hear from you. Reach out to discuss how you can get involved.
               </p>
               <Button variant="default" size="lg" asChild>
-                <a href="mailto:info@fna-foundation.org">
+                <a href="mailto:info@thefalegacy.org">
                   Contact Us
                 </a>
               </Button>

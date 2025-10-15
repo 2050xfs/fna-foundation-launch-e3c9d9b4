@@ -23,7 +23,11 @@ const eventTypes: EventSuggestionFormValues["eventType"][] = [
   "Other",
 ];
 
-const EventSuggestionForm = () => {
+type EventSuggestionFormProps = {
+  onSuccess?: () => void;
+};
+
+const EventSuggestionForm = ({ onSuccess }: EventSuggestionFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<EventSuggestionFormValues>({
@@ -47,6 +51,7 @@ const EventSuggestionForm = () => {
       await submitFormToWebhook("event_suggestion", values);
       toast.success("Thank you for sharing your idea! Our team will review it soon.");
       form.reset();
+      onSuccess?.();
     } catch (error) {
       console.error(error);
       toast.error("Oops! Something went wrong. Please try again or email us at info@thefalegacy.org");

@@ -24,7 +24,11 @@ const ratingLabels: Record<EventFeedbackFormValues["rating"], string> = {
   "5": "5 - Outstanding",
 };
 
-const EventFeedbackForm = () => {
+type EventFeedbackFormProps = {
+  onSuccess?: () => void;
+};
+
+const EventFeedbackForm = ({ onSuccess }: EventFeedbackFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<EventFeedbackFormValues>({
@@ -47,6 +51,7 @@ const EventFeedbackForm = () => {
       await submitFormToWebhook("event_feedback", values);
       toast.success("Thank you! Your feedback has been received.");
       form.reset();
+      onSuccess?.();
     } catch (error) {
       console.error(error);
       toast.error("Oops! Something went wrong. Please try again or email us at info@thefalegacy.org");

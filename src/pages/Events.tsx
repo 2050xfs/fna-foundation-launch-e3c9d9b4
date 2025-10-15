@@ -1,12 +1,18 @@
+import { useState } from "react";
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import EventFeedbackForm from "@/components/forms/EventFeedbackForm";
 import EventSuggestionForm from "@/components/forms/EventSuggestionForm";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Calendar, MapPin, Users, Clock } from "lucide-react";
 import eventImage from "@/assets/community-event.jpg";
 
 const Events = () => {
+  const [isFeedbackDialogOpen, setIsFeedbackDialogOpen] = useState(false);
+  const [isSuggestionDialogOpen, setIsSuggestionDialogOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -173,7 +179,46 @@ const Events = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">Share Your Feedback</h2>
             <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
-            <EventFeedbackForm />
+
+            <Dialog open={isFeedbackDialogOpen} onOpenChange={setIsFeedbackDialogOpen}>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-soft">
+                <div className="space-y-4 text-center md:text-left">
+                  <h3 className="text-2xl font-semibold text-foreground">We value your voice</h3>
+                  <p className="text-muted-foreground text-lg">
+                    Tell us what felt meaningful, what could improve, and how we can keep designing gatherings that nurture Black
+                    youth and families.
+                  </p>
+                  <ul className="text-left text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary" aria-hidden />
+                      <span>Reflect on your favorite moments from recent events.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary" aria-hidden />
+                      <span>Share ideas for how we can better support healing and connection.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary" aria-hidden />
+                      <span>Let us know if you&apos;d like to be contacted about future gatherings.</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-sm text-muted-foreground sm:max-w-md">
+                      We read every submission and use your insights to shape upcoming community spaces.
+                    </p>
+                    <DialogTrigger asChild>
+                      <Button variant="cta" size="lg" className="w-full sm:w-auto">
+                        Share Feedback
+                      </Button>
+                    </DialogTrigger>
+                  </div>
+                </div>
+              </div>
+
+              <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none sm:rounded-none">
+                <EventFeedbackForm onSuccess={() => setIsFeedbackDialogOpen(false)} />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </section>
@@ -184,11 +229,45 @@ const Events = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">Suggest an Event</h2>
             <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-10" />
-            <p className="text-lg text-muted-foreground text-center mb-8">
-              Dreaming up a gathering that would serve Black youth and families? Share the vision below and we&apos;ll explore it with
-              you.
-            </p>
-            <EventSuggestionForm />
+            <Dialog open={isSuggestionDialogOpen} onOpenChange={setIsSuggestionDialogOpen}>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-soft">
+                <div className="space-y-4 text-center md:text-left">
+                  <h3 className="text-2xl font-semibold text-foreground">Bring your idea to life</h3>
+                  <p className="text-muted-foreground text-lg">
+                    Dreaming up a gathering that would serve Black youth and families? Share your vision so we can explore what it
+                    would take to make it real.
+                  </p>
+                  <ul className="text-left text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary" aria-hidden />
+                      <span>Describe the purpose and who you hope to bring together.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary" aria-hidden />
+                      <span>Share dates, locations, or partners you already have in mind.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary" aria-hidden />
+                      <span>Let us know the support or resources that would make it possible.</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-sm text-muted-foreground sm:max-w-md">
+                      Our team reviews every suggestion and will follow up if it aligns with the FA Foundation mission.
+                    </p>
+                    <DialogTrigger asChild>
+                      <Button variant="default" size="lg" className="w-full sm:w-auto">
+                        Suggest an Event
+                      </Button>
+                    </DialogTrigger>
+                  </div>
+                </div>
+              </div>
+
+              <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none sm:rounded-none">
+                <EventSuggestionForm onSuccess={() => setIsSuggestionDialogOpen(false)} />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +26,8 @@ const Navigation = () => {
           <Link to="/" className="flex items-center group">
             <img 
               src={logo} 
-              alt="Francisca & Angelina Foundation" 
-              className="h-14 w-auto transition-transform group-hover:scale-105"
+              alt="Francisca & Angelina Foundation logo" 
+              className="h-12 md:h-14 lg:h-16 w-auto transition-transform group-hover:scale-105"
             />
           </Link>
 

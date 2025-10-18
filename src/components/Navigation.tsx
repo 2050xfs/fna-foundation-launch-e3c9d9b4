@@ -37,7 +37,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                className={`px-4 py-2 rounded-lg font-medium transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                   isActive(link.path)
                     ? "text-primary bg-background/10"
                     : "text-background/80 hover:text-primary hover:bg-background/10"
@@ -46,8 +46,11 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/donate">
-              <Button variant="cta" size="sm" className="ml-4 text-sm font-semibold">
+            <Link
+              to="/donate"
+              className="ml-4 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <Button variant="cta" size="sm" className="text-sm font-semibold">
                 Donate Now
               </Button>
             </Link>
@@ -72,7 +75,7 @@ const Navigation = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`px-4 py-3 rounded-lg font-medium transition-all ${
+                  className={`px-4 py-3 rounded-lg font-medium transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                     isActive(link.path)
                       ? "text-primary bg-background/10"
                       : "text-background/80 hover:text-primary hover:bg-background/10"
@@ -81,7 +84,11 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link to="/donate" onClick={() => setIsOpen(false)} className="px-4 py-2">
+              <Link
+                to="/donate"
+                onClick={() => setIsOpen(false)}
+                className="px-4 py-2 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
                 <Button variant="cta" size="sm" className="w-full text-sm font-semibold">
                   Donate Now
                 </Button>

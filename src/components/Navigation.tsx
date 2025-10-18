@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +23,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-soft transition-transform group-hover:scale-105">
-              <span className="text-background font-bold text-xl">FNA</span>
-            </div>
-            <div className="hidden sm:block">
-              <div className="font-bold text-lg text-background">Francisca & Angelina Foundation</div>
-              <div className="text-sm text-background/80">Empowering Youth, Building Futures</div>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={logo} 
+              alt="Francisca & Angelina Foundation" 
+              className="h-14 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,5 +1,5 @@
 export const LEADCONNECTOR_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/xiUC7S7xDd71mbS5tT0A/webhook-trigger/b410807f-c041-4b99-8a5d-09347e0dcb32";
+  "https://services.leadconnectorhq.com/hooks/xiUC7S7xDd71mbS5tT0A/webhook-trigger/041ddaef-0209-4ea1-8b4e-b2549aa6404e";
 
 export type SourceForm =
   | "event_feedback"

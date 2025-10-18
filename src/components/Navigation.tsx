@@ -27,7 +27,7 @@ const Navigation = () => {
             <img
               src={logo}
               alt="Francisca & Angelina Foundation logo"
-              className="h-12 md:h-14 lg:h-16 w-auto flex-shrink-0 transition-transform group-hover:scale-105"
+              className="h-16 md:h-20 max-h-full w-auto flex-shrink-0 transition-transform group-hover:scale-105"
             />
           </Link>
 

@@ -21,13 +21,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm shadow-soft text-background">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28 md:h-32 lg:h-36">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 
               src={logo} 
               alt="Francisca & Angelina Foundation logo" 
-              className="h-[72px] md:h-[88px] lg:h-28 w-auto transition-transform group-hover:scale-105"
+              className="h-12 md:h-14 lg:h-16 w-auto transition-transform group-hover:scale-105"
             />
           </Link>
 

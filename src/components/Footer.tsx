@@ -15,7 +15,8 @@ const Footer = () => {
               <div className="font-bold text-lg">Francisca & Angelina Foundation</div>
             </div>
             <p className="text-background/80 text-sm">
-              Based in Oakland, empowering Black youth aged 13+ through Restorative Justice, education, health, and economic opportunity.
+              Based in Oakland, empowering Black youth aged 13+ through Restorative Justice, education, health, and
+              economic opportunity.
             </p>
           </div>
 
@@ -63,7 +64,7 @@ const Footer = () => {
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.instagram.com/f.a.foundation?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+                  href="https://www.instagram.com/f.a.foundation?igsh=MXB3ZjZ4c2pmcHd1bA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary/40 transition-colors"

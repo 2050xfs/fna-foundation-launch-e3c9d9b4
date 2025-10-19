@@ -33,8 +33,16 @@ export const submitFormToWebhook = async <TData extends Record<string, unknown>>
   });
 
   if (!response.ok) {
-    const errorMessage = await response.text().catch(() => "Failed to submit form.");
-    throw new Error(errorMessage || "Failed to submit form.");
+    const errorMessage = await response
+      .text()
+      .then((message) => message.trim())
+      .catch(() => "");
+
+    const detail = errorMessage ? `: ${errorMessage}` : "";
+
+    throw new Error(
+      `Webhook submission failed (${response.status} ${response.statusText})${detail}`,
+    );
   }
 
   return response;

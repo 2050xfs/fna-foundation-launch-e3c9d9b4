@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Facebook, Instagram } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   return (
@@ -8,12 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center">
-                <span className="text-background font-bold text-lg">FNA</span>
-              </div>
-              <div className="font-bold text-lg">Francisca & Angelina Foundation</div>
-            </div>
+            <Link to="/" className="flex items-center mb-4 group">
+              <img
+                src={logo}
+                alt="Francisca & Angelina Foundation logo"
+                className="h-16 w-auto transition-transform group-hover:scale-105"
+              />
+            </Link>
             <p className="text-background/80 text-sm">
               Based in Oakland, empowering Black youth aged 13+ through Restorative Justice, education, health, and
               economic opportunity.

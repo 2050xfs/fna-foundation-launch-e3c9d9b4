@@ -15,11 +15,16 @@ import {
 import { submitFormToWebhook } from "@/lib/webhookHandler";
 
 const eventTypes: EventSuggestionFormValues["eventType"][] = [
-  "Wellness",
-  "Education",
-  "Economic Opportunity",
+  "Educational Workshop",
+  "STEM/Technology Program",
+  "Arts & Culture Event",
+  "Sports Activity",
+  "Health & Wellness",
+  "Restorative Justice Circle",
+  "Business/Entrepreneurship",
+  "Environmental Activity",
   "Community Meal",
-  "Fundraiser",
+  "Family Event",
   "Other",
 ];
 
@@ -101,7 +106,7 @@ const EventSuggestionForm = () => {
         label="Who would this event support and what impact would it have?"
         required
       >
-        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="This event would support Black youth ages 13+ by..." />}
+        {(field) => <Textarea {...field} value={field.value as string} rows={4} placeholder="This event would support youth ages 5-17 by..." />}
       </FormField>
 
       <div className="grid gap-6 md:grid-cols-2">

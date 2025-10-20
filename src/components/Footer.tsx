@@ -17,8 +17,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-background/80 text-sm">
-              Based in Oakland, empowering Black youth aged 13+ through Restorative Justice, education, health, and
-              economic opportunity.
+              Empowering Black youth ages 5-17 in Oakland through education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice.
             </p>
           </div>
 

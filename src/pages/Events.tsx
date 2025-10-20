@@ -20,7 +20,7 @@ const Events = () => {
             </h1>
             <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Based in Oakland, we bring together Black youth and families through events focused on healing, education, and economic opportunity.
+              Based in Oakland, we bring together youth ages 5-17 and families through events focused on education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice.
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Events = () => {
                     Holiday Family Event
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Join us for a special holiday gathering providing meals and resources for Black youth and families, with a focus on wellness, healing, and building community connections.
+                    Join us for a special holiday gathering providing meals, STEM workshops, arts activities, sports programs, wellness resources, and community healing for youth ages 5-17 and families.
                   </p>
 
                   <div className="space-y-4 mb-8">
@@ -86,7 +86,7 @@ const Events = () => {
                     <div className="flex items-start space-x-3">
                       <Users className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">For Youth Aged 13+ and Families</p>
+                        <p className="font-semibold text-foreground">For Youth Ages 5-17 and Families</p>
                         <p className="text-sm text-muted-foreground">Free event, registration required</p>
                       </div>
                     </div>
@@ -139,9 +139,9 @@ const Events = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Youth Programs (Ages 13+)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Youth Programs (Ages 5-17)</h3>
                 <p className="text-muted-foreground">
-                  Educational workshops on financial literacy, economic opportunity, and skills for self-sufficiency.
+                  Age-appropriate workshops in STEM, arts, sports, financial literacy, entrepreneurship, and environmental education.
                 </p>
               </div>
             </div>

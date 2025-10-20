@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import DonationOverlay from "@/components/DonationOverlay";
-import { Heart, Users, BookOpen, Calendar, ArrowRight } from "lucide-react";
+import PartnershipsSection from "@/components/PartnershipsSection";
+import { Heart, Users, BookOpen, Calendar, ArrowRight, Lightbulb, Palette, Trophy, Briefcase, Leaf, Target } from "lucide-react";
 import heroImage from "@/assets/hero-community.jpg";
 import youthImage from "@/assets/youth-learning.jpg";
 
@@ -60,12 +61,12 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-background mb-6 leading-tight">
-              Healing Families.
+              Empowering Oakland's Youth
               <br />
-              Building Futures.
+              Through Transformative Programs
             </h1>
             <p className="text-xl md:text-2xl text-background/90 mb-8 leading-relaxed">
-              Based in Oakland, empowering Black youth aged 13+ through Restorative Justice, education, health, and economic opportunity.
+              From ages 5 to 17, we provide comprehensive support in education, STEM, arts, sports, health, entrepreneurship, and Restorative Justice—building pathways to self-sufficiency and intergenerational prosperity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/get-involved">
@@ -96,38 +97,91 @@ const Home = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Mission</h2>
               <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
               <p className="text-xl text-muted-foreground leading-relaxed">
-                The Francisca & Angelina Foundation is dedicated to creating lasting change for Black youth and families. Inspired by our founder's grandmothers—Francisca and Angelina—women of unwavering faith who built wealth and gave generously to their communities in Nigeria, we carry their legacy forward through healing, education, and empowerment.
+                To empower Black youth ages 5-17 in Oakland through transformative programs in education, STEM, arts, sports, health & wellness, economic opportunity, and Restorative Justice—building pathways to self-sufficiency, character development, and intergenerational prosperity.
+              </p>
+              <p className="text-lg text-muted-foreground mt-4 font-semibold">
+                By 2029, we aim to positively impact 10,000 youth through comprehensive programming that nurtures academic excellence, creative expression, physical wellness, entrepreneurial thinking, and healing justice.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-shadow border border-border">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-primary/20">
-                  <Heart className="w-7 h-7 text-primary" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-primary/20">
+                  <BookOpen className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Education</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Equipping Black youth aged 13+ with financial literacy and continuous learning for self-sufficiency.
+                <h3 className="text-xl font-semibold text-foreground mb-3">Education & Academic Excellence</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Financial literacy, tutoring, homework support, and continuous learning for ages 5-17.
                 </p>
               </div>
 
-              <div className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-shadow border border-border">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-accent/20">
-                  <BookOpen className="w-7 h-7 text-accent" />
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-accent/20">
+                  <Lightbulb className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Health & Wellness</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Restorative Justice programs fostering healing, accountability, and holistic well-being.
+                <h3 className="text-xl font-semibold text-foreground mb-3">STEM & Innovation</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Technology education, coding, science exploration, and innovation workshops for ages 8-17.
                 </p>
               </div>
 
-              <div className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-elevated transition-shadow border border-border">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-secondary/20">
-                  <Users className="w-7 h-7 text-secondary-foreground" />
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-secondary/20">
+                  <Palette className="w-7 h-7 text-secondary-foreground" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Economic Opportunity</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Creating pathways to economic self-sufficiency and intergenerational prosperity.
+                <h3 className="text-xl font-semibold text-foreground mb-3">Arts & Culture</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Creative expression, cultural engagement, music, visual arts, and performance for ages 5-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-primary/20">
+                  <Trophy className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Sports & Athletics</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Physical wellness, team building, and character development through sports for ages 5-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-accent/20">
+                  <Heart className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Health & Wellness + Restorative Justice</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Holistic well-being, healing circles, accountability, and mental health support for ages 5-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-secondary/20">
+                  <Briefcase className="w-7 h-7 text-secondary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Business Coaching & Entrepreneurship</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Financial literacy, business skills, and entrepreneurship fundamentals for ages 13-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-primary/20">
+                  <Leaf className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Environmental Sustainability</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Eco-awareness, environmental stewardship, and community garden projects for ages 5-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-elevated transition-shadow border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-accent/20">
+                  <Target className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">2029 Vision</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Our goal: Impact 10,000 youth through comprehensive, age-appropriate programming.
                 </p>
               </div>
             </div>
@@ -153,27 +207,39 @@ const Home = () => {
                 </h2>
                 <div className="h-1 w-20 bg-primary mb-6 rounded-full" />
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  We believe in starting small to make a big impact. Every program empowers Black youth aged 13+ through our three core pillars: education, health, and economic opportunity.
+                  We're starting small to create lasting impact. Our seven core programs empower Black youth ages 5-17 with age-appropriate support across education, STEM, arts, sports, health, entrepreneurship, and environmental sustainability.
                 </p>
-                <div className="space-y-4 mb-8">
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-secondary/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-secondary-foreground rounded-full" />
                     </div>
-                    <p className="text-muted-foreground">Restorative Justice and healing programs fostering accountability and well-being</p>
+                    <p className="text-muted-foreground">7 Core Program Areas</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-secondary/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-secondary-foreground rounded-full" />
                     </div>
-                    <p className="text-muted-foreground">Teaching youth financial literacy and skills for self-sufficiency</p>
+                    <p className="text-muted-foreground">8+ Community Partners</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-secondary/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <div className="w-2 h-2 bg-secondary-foreground rounded-full" />
                     </div>
-                    <p className="text-muted-foreground">Building pathways to economic opportunity and intergenerational empowerment</p>
+                    <p className="text-muted-foreground">Ages 5-17 Served</p>
                   </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-secondary/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-secondary-foreground rounded-full" />
+                    </div>
+                    <p className="text-muted-foreground">Oakland-Based & Community-Focused</p>
+                  </div>
+                </div>
+                <div className="bg-primary/10 rounded-xl p-6 mb-8 border border-primary/20">
+                  <h3 className="text-xl font-bold text-foreground mb-2">Our 2029 Goal</h3>
+                  <p className="text-muted-foreground">
+                    Impact <span className="font-bold text-primary">10,000 youth</span> through comprehensive programming that nurtures academic excellence, creative expression, physical wellness, entrepreneurial thinking, and healing justice.
+                  </p>
                 </div>
                 <Link to="/about">
                   <Button variant="default" size="lg" className="group">
@@ -195,7 +261,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Upcoming Holiday Event</h2>
             <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Join us in Oakland for our Holiday Family Event, bringing together Black youth and families with meals, resources, wellness activities, and community healing.
+              Join us in Oakland for our Holiday Family Event, bringing together youth ages 5-17 and families with meals, resources, wellness activities, STEM workshops, arts programs, and community healing.
             </p>
             <Link to="/events">
               <Button variant="cta" size="lg" className="text-lg">
@@ -206,6 +272,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Partnerships Section */}
+      <PartnershipsSection />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
@@ -215,7 +284,7 @@ const Home = () => {
             </h2>
             <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-background/90 mb-8 leading-relaxed">
-              Your support empowers Black youth in Oakland through Restorative Justice programs, financial literacy education, and pathways to economic opportunity and self-sufficiency.
+              Your support empowers youth ages 5-17 in Oakland through STEM education, arts programs, sports, Restorative Justice, business coaching, and environmental sustainability initiatives—creating pathways to self-sufficiency and intergenerational prosperity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/donate">

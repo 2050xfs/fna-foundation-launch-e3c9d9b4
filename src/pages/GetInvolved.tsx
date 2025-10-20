@@ -25,7 +25,7 @@ const GetInvolved = () => {
             </h1>
             <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Join us in Oakland as we empower Black youth through Restorative Justice. Whether you volunteer, partner with us, or sponsor an event, your involvement creates lasting change.
+              Join us in Oakland as we empower youth ages 5-17 through education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice. Whether you volunteer, partner with us, or sponsor an event, your involvement creates lasting change.
             </p>
           </div>
         </div>
@@ -43,7 +43,7 @@ const GetInvolved = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Volunteer</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Help us serve Black youth and families through programs focused on education, health, and economic opportunity.
+                  Help us serve youth ages 5-17 and families through programs in education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice.
                 </p>
                 <Dialog open={isVolunteerDialogOpen} onOpenChange={setIsVolunteerDialogOpen}>
                   <DialogTrigger asChild>
@@ -116,9 +116,44 @@ const GetInvolved = () => {
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-2">Youth Mentorship (Ages 13+)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Youth Mentorship (Ages 5-17)</h3>
                 <p className="text-muted-foreground">
-                  Guide Black youth through financial literacy programs, economic opportunity workshops, and pathways to self-sufficiency.
+                  Guide youth through age-appropriate programs in education, STEM, arts, financial literacy, and economic opportunity.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-2">STEM & Technology Mentors</h3>
+                <p className="text-muted-foreground">
+                  Lead coding workshops, science experiments, and technology education for youth ages 8-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Arts & Culture Facilitators</h3>
+                <p className="text-muted-foreground">
+                  Guide creative expression, music, visual arts, and cultural programs for youth ages 5-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Sports Coaches & Activity Leaders</h3>
+                <p className="text-muted-foreground">
+                  Lead physical wellness, team building, and character development through sports for ages 5-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Business & Entrepreneurship Mentors</h3>
+                <p className="text-muted-foreground">
+                  Teach business skills, financial literacy, and entrepreneurship to youth ages 13-17.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Environmental Program Coordinators</h3>
+                <p className="text-muted-foreground">
+                  Lead eco-awareness activities, sustainability projects, and environmental education for ages 5-17.
                 </p>
               </div>
 
@@ -132,7 +167,7 @@ const GetInvolved = () => {
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
                 <h3 className="text-xl font-semibold text-foreground mb-2">Health & Wellness Facilitators</h3>
                 <p className="text-muted-foreground">
-                  Lead Restorative Justice circles, wellness activities, and holistic well-being programs supporting healing and accountability.
+                  Lead Restorative Justice circles, wellness activities, and holistic well-being programs.
                 </p>
               </div>
             </div>
@@ -170,7 +205,7 @@ const GetInvolved = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Collaborative Impact</h3>
                     <p className="text-background/80">
-                      Work with us to design programs focused on education, health, and economic opportunity that create self-sufficient communities.
+                      Work with us to design programs in education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice.
                     </p>
                   </div>
                 </div>

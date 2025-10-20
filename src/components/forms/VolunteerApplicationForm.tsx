@@ -17,12 +17,17 @@ import { submitFormToWebhook } from "@/lib/webhookHandler";
 import { cn } from "@/lib/utils";
 
 const passionAreas: VolunteerApplicationFormValues["passionArea"][] = [
-  "Restorative Justice & Healing",
-  "Financial Literacy & Economic Opportunity",
-  "Health & Wellness",
-  "Event Planning",
+  "Education & Tutoring",
+  "STEM & Technology",
+  "Arts & Culture",
+  "Sports & Athletics",
   "Youth Mentorship",
-  "Admin Support",
+  "Restorative Justice & Healing",
+  "Health & Wellness",
+  "Business Coaching",
+  "Environmental Programs",
+  "Event Support",
+  "Administrative Support",
 ];
 
 const contactMethods: VolunteerApplicationFormValues["preferredContact"][] = [

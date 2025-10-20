@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Heart, Target, Eye } from "lucide-react";
+import PartnershipsSection from "@/components/PartnershipsSection";
+import { Heart, Target, Eye, Users, Lightbulb, Handshake, Shield } from "lucide-react";
 
 const About = () => {
   return (
@@ -43,7 +44,7 @@ const About = () => {
                   Their legacy was one of radical generosity, financial wisdom, and deep community care. They understood that true wealth isn't measured by what we keep, but by what we give away and the lives we touch.
                 </p>
                 <p className="leading-relaxed">
-                  Today, we carry that torch forward in Oakland, empowering Black youth aged 13 and up through Restorative Justice principles to create the same opportunities for healing, education, and prosperity that Francisca and Angelina championed throughout their extraordinary lives.
+                  Today, we carry that torch forward in Oakland, empowering Black youth ages 5-17 through comprehensive programs in education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice—creating the same opportunities for healing, education, and prosperity that Francisca and Angelina championed throughout their extraordinary lives.
                 </p>
               </div>
             </div>
@@ -63,7 +64,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Based in Oakland, California, and inspired by the profound legacy of Francisca and Angelina, we empower Black youth aged 13 and up through Restorative Justice principles. We cultivate thriving, self-sufficient communities by championing equitable access to education, health, and economic opportunity, fostering healing, accountability, and positive societal reintegration.
+                  To empower Black youth ages 5-17 in Oakland through transformative programs in education, STEM, arts, sports, health & wellness, economic opportunity, and Restorative Justice—building pathways to self-sufficiency, character development, and intergenerational prosperity.
                 </p>
               </div>
 
@@ -74,7 +75,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We envision a future where every young person, guided by the enduring spirit of Francisca and Angelina, transforms adversity into opportunity through restorative practices. Our communities will be beacons of equitable access, where individuals are equipped with the tools for self-sufficiency, holistic well-being, and continuous learning, creating a lasting legacy of peace, prosperity, and intergenerational empowerment.
+                  By 2029, we aim to positively impact 10,000 youth through comprehensive programming that nurtures academic excellence, creative expression, physical wellness, entrepreneurial thinking, and healing justice. We envision Oakland youth equipped with the tools for self-sufficiency, holistic well-being, and continuous learning—creating a lasting legacy of peace, prosperity, and intergenerational empowerment.
                 </p>
               </div>
             </div>
@@ -120,6 +121,63 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Core Values */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
+              Our Core Values
+            </h2>
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-10" />
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/20">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Inclusivity</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Every child deserves access to transformative opportunities regardless of their background or circumstances.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-accent/20">
+                  <Lightbulb className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We embrace new approaches to youth development, from STEM education to entrepreneurship training.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-secondary/20">
+                  <Handshake className="w-6 h-6 text-secondary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Community Collaboration</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Partnering with organizations across Oakland to amplify our impact and serve youth comprehensively.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/20">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Comprehensive Support</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Addressing the whole child—mind, body, and spirit—through our seven core program areas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partnerships Section */}
+      <PartnershipsSection />
 
       <Footer />
     </div>

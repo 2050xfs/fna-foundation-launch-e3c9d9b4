@@ -5,6 +5,7 @@ export type SourceForm =
   | "event_feedback"
   | "event_suggestion"
   | "partnership"
+  | "sponsorship"
   | "board_application"
   | "fa_application"
   | "fa_volunteer";

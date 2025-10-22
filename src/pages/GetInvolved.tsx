@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PartnershipForm from "@/components/forms/PartnershipForm";
 import VolunteerApplicationForm from "@/components/forms/VolunteerApplicationForm";
+import SponsorshipForm from "@/components/forms/SponsorshipForm";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { HandHeart, Building2, Users, Mail } from "lucide-react";
@@ -11,6 +12,7 @@ import { HandHeart, Building2, Users, Mail } from "lucide-react";
 const GetInvolved = () => {
   const [isVolunteerDialogOpen, setIsVolunteerDialogOpen] = useState(false);
   const [isPartnerDialogOpen, setIsPartnerDialogOpen] = useState(false);
+  const [isSponsorDialogOpen, setIsSponsorDialogOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -87,11 +89,16 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Local businesses can sponsor events and be recognized as community champions.
                 </p>
-                <Button variant="default" className="w-full" asChild>
-                  <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">
-                    Sponsor an Event
-                  </a>
-                </Button>
+                <Dialog open={isSponsorDialogOpen} onOpenChange={setIsSponsorDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="default" className="w-full">
+                      Sponsor an Event
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                    <SponsorshipForm onSuccess={() => setIsSponsorDialogOpen(false)} />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>

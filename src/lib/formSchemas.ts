@@ -227,3 +227,71 @@ export const volunteerApplicationSchema = z.object({
 });
 
 export type VolunteerApplicationFormValues = z.infer<typeof volunteerApplicationSchema>;
+
+export const sponsorshipSchema = z.object({
+  businessName: z
+    .string()
+    .trim()
+    .min(1, "Please enter your business or organization name.")
+    .max(150, "Business name is too long."),
+  contactName: z.string().trim().min(1, "Please enter a contact name.").max(120, "Contact name is too long."),
+  contactEmail: z
+    .string()
+    .trim()
+    .email({ message: "Please enter a valid email address." })
+    .max(160, "Email is too long."),
+  contactPhone: z
+    .string()
+    .trim()
+    .regex(phoneRegex, "Please enter a valid phone number.")
+    .max(40, "Phone number is too long."),
+  sponsorshipLevel: z.enum(
+    [
+      "$500 - Bronze Sponsor",
+      "$1,000 - Silver Sponsor",
+      "$2,500 - Gold Sponsor",
+      "$5,000 - Platinum Sponsor",
+      "$10,000+ - Diamond Sponsor",
+      "Custom Amount",
+    ],
+    { message: "Please select a sponsorship level." },
+  ),
+  eventType: z.enum(
+    [
+      "Educational Workshop",
+      "STEM/Technology Program",
+      "Arts & Culture Event",
+      "Sports Activity",
+      "Health & Wellness",
+      "Restorative Justice Circle",
+      "Business/Entrepreneurship",
+      "Environmental Activity",
+      "Community Meal",
+      "Family Event",
+      "General Program Support",
+    ],
+    { message: "Please select an event type." },
+  ),
+  whySponsor: z
+    .string()
+    .trim()
+    .min(1, "Please tell us why you want to sponsor our programs.")
+    .max(1000, "Please keep your response under 1000 characters."),
+  recognitionPreferences: z
+    .string()
+    .trim()
+    .max(1000, "Please keep your response under 1000 characters.")
+    .optional()
+    .or(z.literal("")),
+  logoUrl: optionalUrl,
+  websiteUrl: optionalUrl,
+  publicRecognition: z.boolean().default(false),
+  additionalNotes: z
+    .string()
+    .trim()
+    .max(1000, "Please keep your response under 1000 characters.")
+    .optional()
+    .or(z.literal("")),
+});
+
+export type SponsorshipFormValues = z.infer<typeof sponsorshipSchema>;

@@ -51,7 +51,7 @@ const GetInvolved = () => {
                       Apply to Volunteer
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none sm:rounded-none">
+                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                     <VolunteerApplicationForm onSuccess={() => setIsVolunteerDialogOpen(false)} />
                   </DialogContent>
                 </Dialog>
@@ -72,7 +72,7 @@ const GetInvolved = () => {
                       Become a Partner
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none sm:rounded-none">
+                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                     <PartnershipForm onSuccess={() => setIsPartnerDialogOpen(false)} />
                   </DialogContent>
                 </Dialog>

@@ -1,5 +1,5 @@
 export const LEADCONNECTOR_WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/xiUC7S7xDd71mbS5tT0A/webhook-trigger/041ddaef-0209-4ea1-8b4e-b2549aa6404e";
+  "https://services.leadconnectorhq.com/hooks/xiUC7S7xDd71mbS5tT0A/webhook-trigger/97b041e0-40a9-4958-bc08-63755d51eeaa";
 
 export type SourceForm =
   | "event_feedback"
@@ -41,9 +41,7 @@ export const submitFormToWebhook = async <TData extends Record<string, unknown>>
 
     const detail = errorMessage ? `: ${errorMessage}` : "";
 
-    throw new Error(
-      `Webhook submission failed (${response.status} ${response.statusText})${detail}`,
-    );
+    throw new Error(`Webhook submission failed (${response.status} ${response.statusText})${detail}`);
   }
 
   return response;

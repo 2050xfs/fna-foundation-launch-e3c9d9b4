@@ -98,9 +98,9 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
                 <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 mx-auto bg-primary/20">
-                  <span className="text-primary font-bold text-2xl">FO</span>
+                  <span className="text-primary font-bold text-2xl">ŪŪ</span>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground text-center mb-2">Francisca Obi</h3>
+                <h3 className="text-xl font-semibold text-foreground text-center mb-2">Ūdökà Ūwàkwé</h3>
                 <p className="text-primary text-center mb-3">Founder & Executive Director</p>
                 <p className="text-muted-foreground text-center text-sm">
                   Carrying forward her grandmothers' legacy of faith, community care, and generosity

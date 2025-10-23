@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PartnershipsSection from "@/components/PartnershipsSection";
-import { Heart, Target, Eye, Users, Lightbulb, Handshake, Shield, Sparkles, HandHeart } from "lucide-react";
+import { Heart, Target, Eye, Users, Lightbulb, Handshake, Shield } from "lucide-react";
 import udokaPhoto from "@/assets/udoka-uwakwe.jpg";
 
 const About = () => {
@@ -10,14 +10,14 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-36 pb-20 bg-gradient-subtle">
+      <section className="pt-32 pb-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Our Story
             </h1>
-            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-8" />
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6" />
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Based in Oakland, carrying forward a legacy of faith, generosity, and community care
             </p>
           </div>
@@ -25,60 +25,57 @@ const About = () => {
       </section>
 
       {/* Founder's Story */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-4 rounded-full ring-1 ring-primary/20">
-                <Heart className="w-12 h-12 text-primary" />
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elevated border border-border">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-accent/20">
+                  <Heart className="w-8 h-8 text-accent" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  A Legacy of Faith & Generosity
+                </h2>
               </div>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">A Legacy of Faith & Generosity</h2>
-            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-16" />
-            
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed text-left">
-              <p>
-                The Francisca & Angelina Foundation is inspired by our founder's grandmothers—Francisca and Angelina—women of unwavering faith who selflessly nourished communities in Nigeria. Throughout their lives, they built wealth not just for themselves, but to uplift entire communities.
-              </p>
-              <p>
-                Their legacy was one of radical generosity, financial wisdom, and deep community care. They understood that true wealth isn't measured by what we keep, but by what we give away and the lives we touch.
-              </p>
-              <p>
-                Today, we carry that torch forward in Oakland, empowering Black youth ages 5-17 through comprehensive programs in education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice—creating the same opportunities for healing, education, and prosperity that Francisca and Angelina championed throughout their extraordinary lives.
-              </p>
+              <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+                <p className="leading-relaxed">
+                  The Francisca & Angelina Foundation is inspired by our founder's grandmothers—Francisca and Angelina—women of unwavering faith who selflessly nourished communities in Nigeria. Throughout their lives, they built wealth not just for themselves, but to uplift entire communities.
+                </p>
+                <p className="leading-relaxed">
+                  Their legacy was one of radical generosity, financial wisdom, and deep community care. They understood that true wealth isn't measured by what we keep, but by what we give away and the lives we touch.
+                </p>
+                <p className="leading-relaxed">
+                  Today, we carry that torch forward in Oakland, empowering Black youth ages 5-17 through comprehensive programs in education, STEM, arts, sports, health, entrepreneurship, environmental sustainability, and Restorative Justice—creating the same opportunities for healing, education, and prosperity that Francisca and Angelina championed throughout their extraordinary lives.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Mission */}
-              <div className="text-center md:text-left space-y-6">
-                <div className="flex justify-center md:justify-start">
-                  <div className="p-4 rounded-full ring-1 ring-primary/20">
-                    <Target className="w-16 h-16 text-primary" />
-                  </div>
+              <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-primary/20">
+                  <Target className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground">Our Mission</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   To empower Black youth ages 5-17 in Oakland through transformative programs in education, STEM, arts, sports, health & wellness, economic opportunity, and Restorative Justice—building pathways to self-sufficiency, character development, and intergenerational prosperity.
                 </p>
               </div>
 
               {/* Vision */}
-              <div className="text-center md:text-left space-y-6">
-                <div className="flex justify-center md:justify-start">
-                  <div className="p-4 rounded-full ring-1 ring-primary/20">
-                    <Sparkles className="w-16 h-16 text-primary" />
-                  </div>
+              <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-accent/20">
+                  <Eye className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground">Our Vision</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   By 2029, we aim to positively impact 10,000 youth through comprehensive programming that nurtures academic excellence, creative expression, physical wellness, entrepreneurial thinking, and healing justice. We envision Oakland youth equipped with the tools for self-sufficiency, holistic well-being, and continuous learning—creating a lasting legacy of peace, prosperity, and intergenerational empowerment.
                 </p>
               </div>
@@ -130,69 +127,53 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
               Our Core Values
             </h2>
-            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-16" />
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-10" />
             
-            <div className="grid md:grid-cols-2 gap-8 gap-y-12">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="p-4 rounded-full ring-1 ring-primary/20">
-                    <Users className="w-14 h-14 text-primary" />
-                  </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/20">
+                  <Users className="w-6 h-6 text-primary" />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">Inclusivity</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Every child deserves access to transformative opportunities regardless of their background or circumstances.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Inclusivity</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Every child deserves access to transformative opportunities regardless of their background or circumstances.
+                </p>
               </div>
 
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="p-4 rounded-full ring-1 ring-primary/20">
-                    <Lightbulb className="w-14 h-14 text-primary" />
-                  </div>
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-accent/20">
+                  <Lightbulb className="w-6 h-6 text-accent" />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">Innovation</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    We embrace new approaches to youth development, from STEM education to entrepreneurship training.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We embrace new approaches to youth development, from STEM education to entrepreneurship training.
+                </p>
               </div>
 
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="p-4 rounded-full ring-1 ring-primary/20">
-                    <HandHeart className="w-14 h-14 text-primary" />
-                  </div>
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-secondary/20">
+                  <Handshake className="w-6 h-6 text-secondary-foreground" />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">Community Collaboration</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Partnering with organizations across Oakland to amplify our impact and serve youth comprehensively.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Community Collaboration</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Partnering with organizations across Oakland to amplify our impact and serve youth comprehensively.
+                </p>
               </div>
 
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="p-4 rounded-full ring-1 ring-primary/20">
-                    <Heart className="w-14 h-14 text-primary" />
-                  </div>
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/20">
+                  <Shield className="w-6 h-6 text-primary" />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">Comprehensive Support</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Addressing the whole child—mind, body, and spirit—through our seven core program areas.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Comprehensive Support</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Addressing the whole child—mind, body, and spirit—through our seven core program areas.
+                </p>
               </div>
             </div>
           </div>

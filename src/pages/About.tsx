@@ -83,39 +83,30 @@ const About = () => {
         </div>
       </section>
 
-      {/* Board Members */}
+      {/* Leadership */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
-              Our Leadership
+              Leadership
             </h2>
             <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-10" />
-            <p className="text-xl text-muted-foreground mb-12 text-center">
-              Dedicated individuals committed to our mission
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 mx-auto bg-primary/20">
-                  <span className="text-primary font-bold text-2xl">UU</span>
+            
+            <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                {/* Avatar */}
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center bg-primary/20 flex-shrink-0">
+                  <span className="text-primary font-bold text-4xl">UU</span>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground text-center mb-2">Udoka Uwakwe</h3>
-                <p className="text-primary text-center mb-3">Founder & Executive Director</p>
-                <p className="text-muted-foreground text-center text-sm">
-                  Carrying forward his grandmothers' legacy of faith, community care, and generosity
-                </p>
-              </div>
-
-              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 mx-auto bg-accent/20">
-                  <span className="text-accent font-bold text-2xl">BD</span>
+                
+                {/* Content */}
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">Udoka Uwakwe</h3>
+                  <p className="text-primary font-semibold mb-3">Founder & Executive Director</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Carrying forward his grandmothers' legacy of faith, community care, and generosity, Udoka founded the Francisca & Angelina Foundation to empower Black youth in Oakland through comprehensive programs that build pathways to self-sufficiency and intergenerational prosperity.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground text-center mb-2">Board Members</h3>
-                <p className="text-primary text-center mb-3">Coming Soon</p>
-                <p className="text-muted-foreground text-center text-sm">
-                  We're assembling a dedicated team of community leaders
-                </p>
               </div>
             </div>
           </div>

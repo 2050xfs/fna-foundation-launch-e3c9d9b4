@@ -1,10 +1,12 @@
-import { Building2, Cpu, Palette, Leaf, Heart } from "lucide-react";
+import { Building2 } from "lucide-react";
 import saveTheBayLogo from "@/assets/partners/save-the-bay-logo.png";
 import googleLogo from "@/assets/partners/google-logo.png";
 import facebookLogo from "@/assets/partners/facebook-logo.png";
 import salesforceLogo from "@/assets/partners/salesforce-logo.png";
 import warriorsLogo from "@/assets/partners/warriors-logo.png";
 import omcaLogo from "@/assets/partners/omca-logo.png";
+import chabotLogo from "@/assets/partners/chabot-logo.png";
+import ebcfLogo from "@/assets/partners/ebcf-logo.png";
 
 const PartnershipsSection = () => {
   const techPartners = [
@@ -28,25 +30,21 @@ const PartnershipsSection = () => {
     },
     {
       name: "Chabot Space & Science Center",
-      color: "from-purple-500 to-blue-600",
-      icon: Cpu,
       website: "https://chabotspace.org",
       category: "STEM Education",
+      logo: chabotLogo,
     },
     {
       name: "Save The Bay",
-      color: "from-green-500 to-blue-500",
-      icon: Leaf,
       website: "https://savebay.org",
       category: "Environmental",
       logo: saveTheBayLogo,
     },
     {
       name: "East Bay Community Foundation",
-      color: "from-teal-500 to-cyan-600",
-      icon: Building2,
       website: "https://www.ebcf.org",
       category: "Community Foundation",
+      logo: ebcfLogo,
     },
   ];
 

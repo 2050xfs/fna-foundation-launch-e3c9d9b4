@@ -97,7 +97,7 @@ const PartnershipsSection = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
               Community Collaborators
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
               {communityPartners.map((partner, index) => (
                 <a
                   key={partner.name}
@@ -106,6 +106,8 @@ const PartnershipsSection = () => {
                   rel="noopener noreferrer"
                   className={cn(
                     "group text-center space-y-2 transition-opacity hover:opacity-80",
+                    "lg:col-span-2",
+                    index === 3 && "lg:col-start-2",
                     index === 4 && "md:col-span-2 md:flex md:flex-col md:items-center md:max-w-xs md:mx-auto"
                   )}
                 >

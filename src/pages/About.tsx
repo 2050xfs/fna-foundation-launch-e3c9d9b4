@@ -85,31 +85,39 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-16 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
               Leadership
             </h2>
-            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-10" />
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-16" />
             
-            <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                {/* Photo */}
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 shadow-lg">
+            <div className="grid md:grid-cols-3 gap-12 items-start">
+              {/* Photo Column */}
+              <div className="flex flex-col items-center md:items-start">
+                <div className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-primary/10">
                   <img 
                     src={udokaPhoto} 
                     alt="Udoka Uwakwe, Founder & Executive Director"
                     className="w-full h-full object-cover"
                   />
                 </div>
+              </div>
+              
+              {/* Content Column - spans 2 columns */}
+              <div className="md:col-span-2 text-center md:text-left space-y-6">
+                <div>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">Udoka Uwakwe</h3>
+                  <p className="text-lg md:text-xl text-primary font-semibold mb-6">Founder & Executive Director</p>
+                </div>
                 
-                {/* Content */}
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">Udoka Uwakwe</h3>
-                  <p className="text-primary font-semibold mb-3">Founder & Executive Director</p>
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="space-y-4">
+                  <p className="text-lg text-muted-foreground leading-relaxed">
                     Carrying forward his grandmothers' legacy of faith, community care, and generosity, Udoka founded the Francisca & Angelina Foundation to empower Black youth in Oakland through comprehensive programs that build pathways to self-sufficiency and intergenerational prosperity.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    His vision continues the tradition of Francisca and Angelina—creating opportunities for healing, education, and prosperity for the next generation.
                   </p>
                 </div>
               </div>

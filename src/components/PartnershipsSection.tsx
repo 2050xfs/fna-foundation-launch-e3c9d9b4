@@ -106,7 +106,6 @@ const PartnershipsSection = () => {
                   rel="noopener noreferrer"
                   className={cn(
                     "group text-center space-y-2 transition-opacity hover:opacity-80",
-                    index === 3 && "lg:col-start-2",
                     index === 4 && "md:col-span-2 md:flex md:flex-col md:items-center md:max-w-xs md:mx-auto"
                   )}
                 >

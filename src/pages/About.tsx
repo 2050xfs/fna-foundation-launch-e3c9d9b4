@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PartnershipsSection from "@/components/PartnershipsSection";
 import { Heart, Target, Eye, Users, Lightbulb, Handshake, Shield } from "lucide-react";
+import udokaPhoto from "@/assets/udoka-uwakwe.jpg";
 
 const About = () => {
   return (
@@ -94,9 +95,13 @@ const About = () => {
             
             <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                {/* Avatar */}
-                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center bg-primary/20 flex-shrink-0">
-                  <span className="text-primary font-bold text-4xl">UU</span>
+                {/* Photo */}
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 shadow-lg">
+                  <img 
+                    src={udokaPhoto} 
+                    alt="Udoka Uwakwe, Founder & Executive Director"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Content */}

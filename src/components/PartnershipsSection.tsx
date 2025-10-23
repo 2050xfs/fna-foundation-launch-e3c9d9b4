@@ -1,4 +1,5 @@
 import { Building2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import saveTheBayLogo from "@/assets/partners/save-the-bay-logo.png";
 import googleLogo from "@/assets/partners/google-logo.png";
 import facebookLogo from "@/assets/partners/facebook-logo.png";
@@ -97,26 +98,30 @@ const PartnershipsSection = () => {
               Community Collaborators
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-              {communityPartners.map((partner) => (
+              {communityPartners.map((partner, index) => (
                 <a
                   key={partner.name}
                   href={partner.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group text-center space-y-4 transition-opacity hover:opacity-80"
+                  className={cn(
+                    "group text-center space-y-2 transition-opacity hover:opacity-80",
+                    index === 3 && "lg:col-start-2",
+                    index === 4 && "md:col-span-2 md:flex md:flex-col md:items-center md:max-w-xs md:mx-auto"
+                  )}
                 >
-                  <div className="h-20 md:h-24 flex items-center justify-center">
+                  <div className="h-28 md:h-24 flex items-center justify-center">
                     <img
                       src={partner.logo}
                       alt={`${partner.name} logo`}
-                      className="max-h-20 md:max-h-24 w-auto group-hover:scale-105 transition-transform duration-300"
+                      className="max-h-28 md:max-h-24 w-auto group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div>
-                    <h4 className="text-xl md:text-2xl font-semibold text-foreground mb-1">
+                    <h4 className="text-lg md:text-xl lg:text-2xl font-semibold text-foreground mb-1">
                       {partner.name}
                     </h4>
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm md:text-base text-muted-foreground">
                       {partner.category}
                     </p>
                   </div>

@@ -1,27 +1,30 @@
 import { Building2, Cpu, Palette, Leaf, Heart } from "lucide-react";
 import saveTheBayLogo from "@/assets/partners/save-the-bay-logo.png";
+import googleLogo from "@/assets/partners/google-logo.png";
+import facebookLogo from "@/assets/partners/facebook-logo.png";
+import salesforceLogo from "@/assets/partners/salesforce-logo.png";
+import warriorsLogo from "@/assets/partners/warriors-logo.png";
+import omcaLogo from "@/assets/partners/omca-logo.png";
 
 const PartnershipsSection = () => {
   const techPartners = [
-    { name: "Google", color: "from-blue-500 to-green-500", icon: Cpu },
-    { name: "Facebook", color: "from-blue-600 to-blue-400", icon: Cpu },
-    { name: "Salesforce", color: "from-cyan-500 to-blue-600", icon: Cpu },
+    { name: "Google", logo: googleLogo },
+    { name: "Facebook", logo: facebookLogo },
+    { name: "Salesforce", logo: salesforceLogo },
   ];
 
   const communityPartners = [
     {
       name: "Golden State Warriors",
-      color: "from-yellow-400 to-blue-600",
-      icon: Heart,
       website: "https://www.nba.com/warriors",
       category: "Sports & Athletics",
+      logo: warriorsLogo,
     },
     {
       name: "Oakland Museum of California",
-      color: "from-orange-500 to-red-600",
-      icon: Palette,
       website: "https://museumca.org",
       category: "Arts & Culture",
+      logo: omcaLogo,
     },
     {
       name: "Chabot Space & Science Center",
@@ -70,8 +73,12 @@ const PartnershipsSection = () => {
                   key={partner.name}
                   className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-elevated transition-all group"
                 >
-                  <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${partner.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform`}>
-                    <partner.icon className="w-8 h-8 text-white" />
+                  <div className="h-16 flex items-center justify-center mb-4">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-16 w-auto group-hover:scale-110 transition-transform"
+                    />
                   </div>
                   <h4 className="text-xl font-semibold text-foreground text-center">
                     {partner.name}
@@ -98,19 +105,13 @@ const PartnershipsSection = () => {
                   rel="noopener noreferrer"
                   className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-elevated transition-all group"
                 >
-                  {partner.logo ? (
-                    <div className="h-16 flex items-center justify-center mb-4">
-                      <img
-                        src={partner.logo}
-                        alt={`${partner.name} logo`}
-                        className="max-h-16 w-auto group-hover:scale-110 transition-transform"
-                      />
-                    </div>
-                  ) : (
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${partner.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform`}>
-                      <partner.icon className="w-8 h-8 text-white" />
-                    </div>
-                  )}
+                  <div className="h-16 flex items-center justify-center mb-4">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-16 w-auto group-hover:scale-110 transition-transform"
+                    />
+                  </div>
                   <h4 className="text-lg font-semibold text-foreground text-center mb-1">
                     {partner.name}
                   </h4>

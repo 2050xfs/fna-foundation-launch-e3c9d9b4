@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import DonationOverlay from "@/components/DonationOverlay";
@@ -8,11 +14,13 @@ import PartnershipsSection from "@/components/PartnershipsSection";
 import { Heart, Users, BookOpen, Calendar, ArrowRight, Lightbulb, Palette, Trophy, Briefcase, Leaf, Target } from "lucide-react";
 import heroImage from "@/assets/hero-community.jpg";
 import youthImage from "@/assets/youth-learning.jpg";
+import eventImage from "@/assets/events/family_restoration_night_instagram_final.PNG";
 
 const DISMISS_KEY = "fna-donation-overlay-dismissed";
 
 const Home = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isRSVPDialogOpen, setIsRSVPDialogOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -42,13 +50,33 @@ const Home = () => {
     }
   };
 
+  // Load the form embed script when modal opens
+  useEffect(() => {
+    if (isRSVPDialogOpen) {
+      const script = document.createElement("script");
+      script.src = "https://link.upflexdigital.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        // Cleanup script on unmount
+        const existingScript = document.querySelector(
+          'script[src="https://link.upflexdigital.com/js/form_embed.js"]'
+        );
+        if (existingScript) {
+          document.body.removeChild(existingScript);
+        }
+      };
+    }
+  }, [isRSVPDialogOpen]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <DonationOverlay open={isOverlayOpen} onOpenChange={handleOverlayChange} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-95" />
         <div
           className="absolute inset-0 opacity-20"
@@ -256,18 +284,74 @@ const Home = () => {
       {/* Upcoming Event Preview */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Calendar className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Upcoming Holiday Event</h2>
-            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-6" />
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Join us in Oakland for our Holiday Family Event, bringing together youth ages 5-17 and families with meals, resources, wellness activities, STEM workshops, arts programs, and community healing.
-            </p>
-            <Link to="/events">
-              <Button variant="cta" size="lg" className="text-lg">
-                View Event Details
-              </Button>
-            </Link>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <Calendar className="w-16 h-16 text-primary mx-auto mb-6" />
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">🎉 Family Restoration Night</h2>
+              <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-6" />
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Image Column */}
+              <div className="order-2 md:order-1">
+                <img
+                  src={eventImage}
+                  alt="Family Restoration Night Event"
+                  className="rounded-2xl shadow-elevated w-full h-auto"
+                />
+              </div>
+              
+              {/* Content Column */}
+              <div className="order-1 md:order-2">
+                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                  Join us for a free evening of healing, dinner, sound bath, massage therapy, and family connection.
+                </p>
+                <div className="bg-card rounded-xl p-6 mb-6 border border-border shadow-soft">
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="font-semibold text-foreground mr-2">Date:</span>
+                      <span>Friday, Nov 21, 2025</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-semibold text-foreground mr-2">Time:</span>
+                      <span>6:00 – 8:00 PM</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-semibold text-foreground mr-2">Location:</span>
+                      <span>100 Grand Ave, 6th Floor, Oakland</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="font-semibold text-foreground mr-2">For:</span>
+                      <span>Families + Youth Ages 5–17</span>
+                    </li>
+                  </ul>
+                </div>
+                <Dialog open={isRSVPDialogOpen} onOpenChange={setIsRSVPDialogOpen}>
+                  <DialogTrigger asChild>
+                    <Button variant="cta" size="lg" className="text-lg w-full md:w-auto">
+                      Register for Event
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-hidden p-0 bg-transparent border-none shadow-none">
+                    <DialogTitle className="sr-only">RSVP for Family Restoration Night</DialogTitle>
+                    <div className="h-full w-full">
+                      <iframe
+                        src="https://link.upflexdigital.com/widget/survey/D7c8XYy0TV7ELKBd8olN"
+                        style={{
+                          border: "none",
+                          width: "100%",
+                          height: "90vh",
+                          borderRadius: "12px",
+                        }}
+                        scrolling="no"
+                        id="D7c8XYy0TV7ELKBd8olN-home"
+                        title="Family Restoration Night RSVP Form"
+                        className="w-full"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
           </div>
         </div>
       </section>

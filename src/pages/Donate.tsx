@@ -9,7 +9,7 @@ const Donate = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-40 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Heart className="w-20 h-20 text-accent mx-auto mb-6" />

@@ -1,18 +1,47 @@
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import EventFeedbackForm from "@/components/forms/EventFeedbackForm";
 import EventSuggestionForm from "@/components/forms/EventSuggestionForm";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Calendar, MapPin, Users, Clock } from "lucide-react";
 import eventImage from "@/assets/community-event.jpg";
 
 const Events = () => {
+  const [isRSVPDialogOpen, setIsRSVPDialogOpen] = useState(false);
+
+  // Load the form embed script when modal opens
+  useEffect(() => {
+    if (isRSVPDialogOpen) {
+      const script = document.createElement("script");
+      script.src = "https://link.upflexdigital.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        // Cleanup script on unmount
+        const existingScript = document.querySelector(
+          'script[src="https://link.upflexdigital.com/js/form_embed.js"]'
+        );
+        if (existingScript) {
+          document.body.removeChild(existingScript);
+        }
+      };
+    }
+  }, [isRSVPDialogOpen]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-40 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
@@ -52,53 +81,72 @@ const Events = () => {
 
                 <div className="p-8 md:p-10">
                   <h3 className="text-3xl font-bold text-foreground mb-4">
-                    Holiday Family Event
+                    🎉 Family Restoration Night
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Join us for a special holiday gathering providing meals, STEM workshops, arts activities, sports programs, wellness resources, and community healing for youth ages 5-17 and families.
+                    Join us for a free evening of healing, dinner, sound bath, massage therapy, and family connection.
                   </p>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start space-x-3">
                       <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">December 2025</p>
-                        <p className="text-sm text-muted-foreground">Exact date to be announced</p>
+                        <p className="font-semibold text-foreground">Friday, Nov 21, 2025</p>
+                        <p className="text-sm text-muted-foreground">Save the date</p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3">
                       <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">2:00 PM - 6:00 PM</p>
-                        <p className="text-sm text-muted-foreground">Afternoon gathering</p>
+                        <p className="font-semibold text-foreground">6:00 – 8:00 PM</p>
+                        <p className="text-sm text-muted-foreground">Evening event</p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3">
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">Oakland Community Center</p>
-                        <p className="text-sm text-muted-foreground">Location details coming soon</p>
+                        <p className="font-semibold text-foreground">100 Grand Ave, 6th Floor, Oakland</p>
+                        <p className="text-sm text-muted-foreground">6th Floor</p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3">
                       <Users className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-foreground">For Youth Ages 5-17 and Families</p>
+                        <p className="font-semibold text-foreground">For Families + Youth Ages 5–17</p>
                         <p className="text-sm text-muted-foreground">Free event, registration required</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3">
-                    <Button variant="cta" size="lg" className="w-full text-lg">
-                      Register for Event
-                    </Button>
-                    <p className="text-sm text-muted-foreground text-center">
-                      Registration will open soon. Check back for updates!
-                    </p>
+                    <Dialog open={isRSVPDialogOpen} onOpenChange={setIsRSVPDialogOpen}>
+                      <DialogTrigger asChild>
+                        <Button variant="cta" size="lg" className="w-full text-lg">
+                          Register for Event
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-hidden p-0 bg-transparent border-none shadow-none">
+                        <DialogTitle className="sr-only">RSVP for Family Restoration Night</DialogTitle>
+                        <div className="h-full w-full">
+                          <iframe
+                            src="https://link.upflexdigital.com/widget/survey/D7c8XYy0TV7ELKBd8olN"
+                            style={{
+                              border: "none",
+                              width: "100%",
+                              height: "90vh",
+                              borderRadius: "12px",
+                            }}
+                            scrolling="no"
+                            id="D7c8XYy0TV7ELKBd8olN"
+                            title="Family Restoration Night RSVP Form"
+                            className="w-full"
+                          />
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </div>

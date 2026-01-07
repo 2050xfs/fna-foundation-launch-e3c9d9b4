@@ -14,7 +14,7 @@ import PartnershipsSection from "@/components/PartnershipsSection";
 import { Heart, Users, BookOpen, Calendar, ArrowRight, Lightbulb, Palette, Trophy, Briefcase, Leaf, Target } from "lucide-react";
 import heroImage from "@/assets/hero-community.jpg";
 import youthImage from "@/assets/youth-learning.jpg";
-import eventImage from "@/assets/events/family_restoration_night_instagram_final.PNG";
+import eventImage from "@/assets/events/family_restoration_night_instagram_final.PNG?url";
 
 const DISMISS_KEY = "fna-donation-overlay-dismissed";
 
@@ -127,7 +127,20 @@ const Home = () => {
               <p className="text-xl text-muted-foreground leading-relaxed">
                 To empower Black youth ages 5-17 in Oakland through transformative programs in education, STEM, arts, sports, health & wellness, economic opportunity, and Restorative Justice—building pathways to self-sufficiency, character development, and intergenerational prosperity.
               </p>
-              <p className="text-lg text-muted-foreground mt-4 font-semibold">
+              
+              {/* Mission Video */}
+              <div className="mt-8 mb-6">
+                <div className="relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-elevated aspect-video">
+                  <iframe
+                    src="https://drive.google.com/file/d/1Gt8Uo7g2iR9foEShN-yrRZ_f7bUFYIoa/preview"
+                    className="absolute inset-0 w-full h-full"
+                    allow="autoplay"
+                    title="Francisca & Angelina Foundation Mission Video"
+                  />
+                </div>
+              </div>
+              
+              <p className="text-lg text-muted-foreground font-semibold">
                 By 2029, we aim to positively impact 10,000 youth through comprehensive programming that nurtures academic excellence, creative expression, physical wellness, entrepreneurial thinking, and healing justice.
               </p>
             </div>
